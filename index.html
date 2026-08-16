@@ -1,557 +1,555 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="site-loading">
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>5G Nutrition — Genuine Sports Nutrition, Kashmir</title>
-<meta name="description" content="Kashmir's home for 100% genuine sports nutrition. Whey, mass gainers, creatine, pre-workout and more — verified authentic and delivered across the Valley." />
+<title>5G Nutrition - Protein Shakes &amp; Clean Meals, Srinagar</title>
+<meta name="description" content="Explore 5G Nutrition Srinagar's protein shakes, power bowls, wraps, oats, yoghurt, parfaits, salads, toast, and protein coffee with clear macros and prices." />
+<link rel="preload" as="image" href="assets/brand/5g-nutrition-logo-transparent.png" />
+<link rel="preload" as="image" href="assets/hero-signature-shakes.png" />
+<link rel="preload" as="image" href="assets/effects/protein-shake-overflow.png" />
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@500;600;700;800;900&family=Hanken+Grotesk:wght@400;500;600;700&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet" />
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@600;700;800;900&amp;family=Hanken+Grotesk:wght@400;500;600;700;800&amp;family=Space+Mono:wght@400;700&amp;display=swap" rel="stylesheet" />
 <style>
-  /* ---------- Tokens ---------- */
   :root{
-    --ink:#0C0F14;
-    --ink-2:#12161F;
-    --ink-3:#181D28;
-    --line:rgba(255,255,255,.09);
-    --line-2:rgba(255,255,255,.16);
-    --fog:#98A2B3;
-    --fog-2:#6C7686;
-    --paper:#F3F6F9;
-
-    --volt:#CBF83E;      /* energy / primary accent */
-    --volt-dim:#a6cf2f;
-    --amber:#FFB020;     /* premium / authenticity accent */
-    --heat:#FF6A3D;
-
-    --shadow:0 24px 60px -20px rgba(0,0,0,.65);
-
-    --display:"Archivo",system-ui,sans-serif;
-    --body:"Hanken Grotesk",system-ui,sans-serif;
-    --mono:"Space Mono",ui-monospace,monospace;
-
-    --wrap:1180px;
+    --ink:#071009;--ink-2:#0c1810;--ink-3:#122217;--leaf:#78d421;--leaf-2:#b9f34b;
+    --cream:#f3f6f0;--paper:#f7faf5;--muted:#9da895;--line:rgba(255,255,255,.13);
+    --line-dark:rgba(7,16,9,.12);--gold:#f5be32;--shadow:0 24px 70px rgba(0,0,0,.38);
+    --display:"Archivo",system-ui,sans-serif;--body:"Hanken Grotesk",system-ui,sans-serif;--mono:"Space Mono",ui-monospace,monospace;--wrap:1600px;
   }
-
   *{box-sizing:border-box;margin:0;padding:0}
   html{scroll-behavior:smooth}
   @media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
-
-  body{
-    background:var(--ink);
-    color:var(--paper);
-    font-family:var(--body);
-    font-size:17px;
-    line-height:1.6;
-    -webkit-font-smoothing:antialiased;
-    overflow-x:hidden;
-  }
-  a{color:inherit;text-decoration:none}
-  img{max-width:100%;display:block}
-  ::selection{background:var(--volt);color:var(--ink)}
-
-  .wrap{width:100%;max-width:var(--wrap);margin:0 auto;padding:0 26px}
-
-  .eyebrow{
-    font-family:var(--mono);
-    font-size:12px;
-    letter-spacing:.28em;
-    text-transform:uppercase;
-    color:var(--volt);
-    display:inline-flex;align-items:center;gap:12px;
-  }
-  .eyebrow.amber{color:var(--amber)}
-  .eyebrow.fog{color:var(--fog)}
-
-  h1,h2,h3{font-family:var(--display);font-weight:900;line-height:.98;letter-spacing:-.01em;text-transform:uppercase}
-
-  .btn{
-    display:inline-flex;align-items:center;gap:10px;
-    font-family:var(--mono);font-size:13px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;
-    padding:15px 22px;border-radius:2px;border:1px solid transparent;
-    cursor:pointer;transition:transform .18s ease, background .2s ease, color .2s ease, border-color .2s ease;
-    white-space:nowrap;
-  }
-  .btn-primary{background:var(--volt);color:var(--ink)}
-  .btn-primary:hover{transform:translateY(-2px);background:#d9ff5c}
-  .btn-ghost{border-color:var(--line-2);color:var(--paper)}
-  .btn-ghost:hover{border-color:var(--volt);color:var(--volt);transform:translateY(-2px)}
-  .btn svg{width:16px;height:16px}
-
-  :focus-visible{outline:2px solid var(--volt);outline-offset:3px;border-radius:2px}
-
-  /* ---------- Signature: signal / energy bars ---------- */
-  .bars{display:inline-flex;align-items:flex-end;gap:3px;height:1em}
-  .bars i{
-    width:3px;background:var(--volt);border-radius:1px;
-    display:block;height:35%;
-    transform-origin:bottom;
-    animation:eq 1.1s ease-in-out infinite;
-  }
-  .bars i:nth-child(1){height:40%;animation-delay:0s}
-  .bars i:nth-child(2){height:70%;animation-delay:.15s}
-  .bars i:nth-child(3){height:100%;animation-delay:.3s}
-  .bars i:nth-child(4){height:60%;animation-delay:.45s}
-  .bars i:nth-child(5){height:85%;animation-delay:.6s}
-  @keyframes eq{0%,100%{transform:scaleY(.4)}50%{transform:scaleY(1)}}
-  @media (prefers-reduced-motion:reduce){.bars i{animation:none}}
-
-  /* ================= HEADER ================= */
-  header{
-    position:sticky;top:0;z-index:50;
-    background:rgba(12,15,20,.72);
-    backdrop-filter:blur(14px);
-    border-bottom:1px solid var(--line);
-  }
-  .nav{display:flex;align-items:center;justify-content:space-between;height:70px}
-  .brand{display:flex;align-items:center;gap:11px;font-family:var(--display);font-weight:900;font-size:20px;letter-spacing:.02em;text-transform:uppercase}
-  .brand .g5{color:var(--volt)}
-  .brand .bars{height:20px}
-  .brand .bars i{width:3.5px}
-  .nav-links{display:flex;gap:30px;align-items:center}
-  .nav-links a{font-family:var(--mono);font-size:12.5px;letter-spacing:.08em;text-transform:uppercase;color:var(--fog);transition:color .2s}
-  .nav-links a:hover{color:var(--paper)}
-  .nav .btn{padding:11px 18px}
-  .menu-btn{display:none;background:none;border:1px solid var(--line-2);color:var(--paper);width:42px;height:42px;border-radius:2px;cursor:pointer;font-size:18px}
-
-  @media (max-width:900px){
-    .nav-links{
-      position:fixed;inset:70px 0 auto 0;flex-direction:column;gap:0;
-      background:var(--ink-2);border-bottom:1px solid var(--line);
-      max-height:0;overflow:hidden;transition:max-height .3s ease;
-    }
-    .nav-links.open{max-height:420px}
-    .nav-links a{padding:18px 26px;width:100%;border-bottom:1px solid var(--line);font-size:14px}
-    .nav-links .btn{margin:16px 26px;justify-content:center}
-    .menu-btn{display:inline-flex;align-items:center;justify-content:center}
-  }
-
-  /* ================= HERO ================= */
-  .hero{position:relative;padding:clamp(64px,11vw,130px) 0 clamp(56px,8vw,90px);overflow:hidden}
-  .hero-glow{
-    position:absolute;inset:0;z-index:0;pointer-events:none;
-    background:
-      radial-gradient(60% 55% at 78% 8%, rgba(203,248,62,.14), transparent 60%),
-      radial-gradient(50% 50% at 12% 92%, rgba(255,176,32,.10), transparent 60%);
-  }
-  /* ambient bar field in hero */
-  .hero-field{position:absolute;right:-4%;top:0;bottom:0;width:52%;z-index:0;display:flex;align-items:flex-end;gap:14px;opacity:.5;pointer-events:none;-webkit-mask-image:linear-gradient(90deg,transparent,#000 40%);mask-image:linear-gradient(90deg,transparent,#000 40%)}
-  .hero-field span{flex:1;background:linear-gradient(180deg,rgba(203,248,62,.55),rgba(203,248,62,.02));border-radius:3px 3px 0 0;height:20%;animation:field 3.2s ease-in-out infinite}
-  @keyframes field{0%,100%{height:14%}50%{height:82%}}
-  @media (prefers-reduced-motion:reduce){.hero-field span{animation:none;height:50%}}
-  @media (max-width:820px){.hero-field{display:none}}
-
-  .hero-inner{position:relative;z-index:2;max-width:760px}
-  .hero h1{
-    font-size:clamp(46px,9vw,104px);
-    margin:22px 0 0;
-  }
-  .hero h1 .out{-webkit-text-stroke:1.5px var(--volt);color:transparent}
-  .hero h1 em{font-style:normal;color:var(--volt)}
-  .hero p.lead{margin-top:24px;max-width:540px;font-size:clamp(16px,2.3vw,19px);color:#C4CBD6}
-  .hero-cta{display:flex;gap:14px;margin-top:34px;flex-wrap:wrap}
-  .hero-meta{display:flex;gap:34px;margin-top:44px;flex-wrap:wrap}
-  .hero-meta .m{display:flex;flex-direction:column;gap:2px}
-  .hero-meta .n{font-family:var(--display);font-weight:800;font-size:30px;color:var(--paper)}
-  .hero-meta .n span{color:var(--volt)}
-  .hero-meta .l{font-family:var(--mono);font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--fog)}
-
-  /* ================= TRUST STRIP ================= */
-  .strip{border-top:1px solid var(--line);border-bottom:1px solid var(--line);background:var(--ink-2)}
-  .strip .wrap{display:flex;flex-wrap:wrap;gap:10px 34px;padding-top:20px;padding-bottom:20px}
-  .strip .t{display:flex;align-items:center;gap:11px;font-family:var(--mono);font-size:12.5px;letter-spacing:.05em;text-transform:uppercase;color:#C4CBD6}
-  .strip .t b{color:var(--volt);font-weight:700}
-  .strip .dot{width:6px;height:6px;border-radius:50%;background:var(--amber);flex:none}
-
-  /* ================= SECTION SHELL ================= */
-  section.blk{padding:clamp(64px,9vw,110px) 0;position:relative}
-  .head{display:flex;align-items:flex-end;justify-content:space-between;gap:24px;margin-bottom:46px;flex-wrap:wrap}
-  .head h2{font-size:clamp(30px,5vw,54px)}
-  .head p{color:var(--fog);max-width:420px;margin-top:12px}
-
-  /* ================= CATEGORIES ================= */
-  .cats{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}
-  @media (max-width:900px){.cats{grid-template-columns:repeat(2,1fr)}}
-  @media (max-width:520px){.cats{grid-template-columns:1fr}}
-  .cat{
-    position:relative;background:var(--ink-2);border:1px solid var(--line);border-radius:4px;
-    padding:26px 22px 24px;min-height:172px;display:flex;flex-direction:column;justify-content:space-between;
-    transition:border-color .25s ease, transform .25s ease, background .25s ease;overflow:hidden;
-  }
-  .cat:hover{border-color:var(--volt);transform:translateY(-4px);background:var(--ink-3)}
-  .cat .idx{font-family:var(--mono);font-size:11px;color:var(--fog-2);letter-spacing:.1em}
-  .cat h3{font-size:21px;margin-top:auto;letter-spacing:0}
-  .cat p{font-size:13.5px;color:var(--fog);margin-top:7px;line-height:1.45}
-  .cat .bars{height:22px;position:absolute;top:24px;right:22px;opacity:.4;transition:opacity .25s}
-  .cat:hover .bars{opacity:1}
-  .cat .bars i{animation-play-state:paused}
-  .cat:hover .bars i{animation-play-state:running}
-  .cat::after{content:"";position:absolute;left:0;bottom:0;height:3px;width:0;background:var(--volt);transition:width .35s ease}
-  .cat:hover::after{width:100%}
-
-  /* ================= BRANDS TICKER ================= */
-  .brands{border-top:1px solid var(--line);border-bottom:1px solid var(--line);background:var(--ink-2);padding:30px 0;overflow:hidden}
-  .brands .label{font-family:var(--mono);font-size:11px;letter-spacing:.2em;text-transform:uppercase;color:var(--fog);text-align:center;margin-bottom:20px}
-  .marquee{display:flex;gap:56px;width:max-content;animation:scroll 34s linear infinite}
-  .marquee:hover{animation-play-state:paused}
-  @media (prefers-reduced-motion:reduce){.marquee{animation:none;flex-wrap:wrap;justify-content:center;width:100%;gap:26px 40px}}
-  @keyframes scroll{to{transform:translateX(-50%)}}
-  .marquee span{font-family:var(--display);font-weight:800;font-size:22px;color:var(--fog-2);letter-spacing:.02em;text-transform:uppercase;white-space:nowrap;transition:color .2s}
-  .marquee span:hover{color:var(--paper)}
-
-  /* ================= WHY / AUTHENTICITY ================= */
-  .why{background:
-      linear-gradient(180deg,transparent,rgba(203,248,62,.03)),
-      var(--ink)}
-  .why-grid{display:grid;grid-template-columns:1.05fr .95fr;gap:60px;align-items:center}
-  @media (max-width:880px){.why-grid{grid-template-columns:1fr;gap:44px}}
-  .why h2{font-size:clamp(30px,5vw,52px);margin:20px 0 20px}
-  .why h2 em{font-style:normal;color:var(--volt)}
-  .feat{display:flex;gap:18px;padding:22px 0;border-top:1px solid var(--line)}
-  .feat:last-child{border-bottom:1px solid var(--line)}
-  .feat .k{font-family:var(--mono);font-size:12px;color:var(--amber);letter-spacing:.1em;padding-top:4px;flex:none;width:34px}
-  .feat h3{font-size:19px;letter-spacing:0;margin-bottom:5px}
-  .feat p{color:var(--fog);font-size:15px}
-
-  /* trust meter card */
-  .meter{
-    background:var(--ink-2);border:1px solid var(--line);border-radius:6px;padding:34px;box-shadow:var(--shadow);
-  }
-  .meter .top{display:flex;align-items:center;justify-content:space-between;margin-bottom:26px}
-  .meter .top .bars{height:34px}
-  .meter .top .bars i{width:6px;background:var(--amber)}
-  .meter .top .bars i:nth-child(odd){background:var(--volt)}
-  .meter .badge{font-family:var(--mono);font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--ink);background:var(--volt);padding:6px 11px;border-radius:2px;font-weight:700}
-  .meter .row{display:flex;justify-content:space-between;align-items:center;padding:15px 0;border-top:1px solid var(--line)}
-  .meter .row:first-of-type{border-top:none}
-  .meter .row .lab{font-size:14.5px;color:#C4CBD6;display:flex;align-items:center;gap:10px}
-  .meter .row .val{font-family:var(--mono);font-size:12px;color:var(--volt);letter-spacing:.05em}
-  .meter .tick{width:16px;height:16px;flex:none;color:var(--volt)}
-  .meter .note{margin-top:22px;font-size:12.5px;color:var(--fog-2);line-height:1.5}
-
-  /* ================= HOW TO ORDER ================= */
-  .steps{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
-  @media (max-width:760px){.steps{grid-template-columns:1fr}}
-  .step{background:var(--ink-2);border:1px solid var(--line);border-radius:4px;padding:30px 26px;position:relative}
-  .step .num{font-family:var(--display);font-weight:900;font-size:52px;color:transparent;-webkit-text-stroke:1.4px var(--line-2);line-height:1}
-  .step h3{font-size:20px;letter-spacing:0;margin:16px 0 8px}
-  .step p{color:var(--fog);font-size:15px}
-  .step:nth-child(2) .num{-webkit-text-stroke-color:var(--volt-dim)}
-
-  /* ================= TESTIMONIALS ================= */
-  .quotes{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
-  @media (max-width:820px){.quotes{grid-template-columns:1fr}}
-  .quote{background:var(--ink-2);border:1px solid var(--line);border-radius:4px;padding:28px 26px;display:flex;flex-direction:column;gap:18px}
-  .quote .stars{color:var(--amber);font-family:var(--mono);letter-spacing:3px;font-size:14px}
-  .quote p{font-size:15.5px;color:#D3D9E2;line-height:1.55}
-  .quote .who{display:flex;align-items:center;gap:12px;margin-top:auto}
-  .quote .av{width:38px;height:38px;border-radius:50%;background:linear-gradient(135deg,var(--volt),var(--amber));color:var(--ink);display:grid;place-items:center;font-family:var(--display);font-weight:900;font-size:15px;flex:none}
-  .quote .who b{font-size:14px;display:block}
-  .quote .who small{font-family:var(--mono);font-size:11px;color:var(--fog);letter-spacing:.06em}
-
-  /* ================= CTA BAND ================= */
-  .band{position:relative;overflow:hidden;background:var(--volt);color:var(--ink)}
-  .band .wrap{padding:clamp(50px,7vw,82px) 26px;display:flex;align-items:center;justify-content:space-between;gap:34px;flex-wrap:wrap;position:relative;z-index:2}
-  .band h2{font-size:clamp(30px,5.4vw,58px);color:var(--ink);max-width:640px}
-  .band p{font-family:var(--mono);font-size:13px;letter-spacing:.05em;color:rgba(12,15,20,.72);margin-top:14px;text-transform:uppercase}
-  .band .btn-dark{background:var(--ink);color:var(--volt)}
-  .band .btn-dark:hover{transform:translateY(-2px);background:#000}
-  .band-bars{position:absolute;inset:0;display:flex;align-items:flex-end;gap:8px;opacity:.14;z-index:1;pointer-events:none}
-  .band-bars span{flex:1;background:var(--ink);height:30%;animation:field 3.6s ease-in-out infinite}
-  @media (prefers-reduced-motion:reduce){.band-bars span{animation:none}}
-
-  /* ================= FOOTER ================= */
-  footer{background:var(--ink-2);border-top:1px solid var(--line);padding:64px 0 30px}
-  .foot-grid{display:grid;grid-template-columns:1.4fr 1fr 1fr 1.2fr;gap:40px}
-  @media (max-width:820px){.foot-grid{grid-template-columns:1fr 1fr;gap:34px}}
-  @media (max-width:480px){.foot-grid{grid-template-columns:1fr}}
-  .foot-grid h4{font-family:var(--mono);font-size:11px;letter-spacing:.18em;text-transform:uppercase;color:var(--fog);margin-bottom:18px;font-weight:700}
-  .foot-grid a,.foot-grid p{color:#C4CBD6;font-size:14.5px;display:block;margin-bottom:11px;transition:color .2s}
-  .foot-grid a:hover{color:var(--volt)}
-  .foot-brand .brand{margin-bottom:16px}
-  .foot-brand p{color:var(--fog);font-size:14px;max-width:280px}
-  .foot-bottom{border-top:1px solid var(--line);margin-top:48px;padding-top:24px;display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
-  .foot-bottom p{font-family:var(--mono);font-size:11.5px;color:var(--fog-2);letter-spacing:.04em}
-  .placeholder{color:var(--amber) !important;border-bottom:1px dashed rgba(255,176,32,.4)}
-
-  /* reveal animation */
-  .rise{opacity:0;transform:translateY(24px);transition:opacity .7s ease, transform .7s ease}
-  .rise.in{opacity:1;transform:none}
-  @media (prefers-reduced-motion:reduce){.rise{opacity:1;transform:none;transition:none}}
-
-  /* floating whatsapp */
-  .fab{position:fixed;right:20px;bottom:20px;z-index:60;background:var(--volt);color:var(--ink);width:56px;height:56px;border-radius:50%;display:grid;place-items:center;box-shadow:0 12px 30px -8px rgba(0,0,0,.6);transition:transform .2s}
-  .fab:hover{transform:scale(1.06)}
-  .fab svg{width:26px;height:26px}
+  body{background:var(--ink);color:var(--paper);font-family:var(--body);font-size:17px;line-height:1.55;-webkit-font-smoothing:antialiased;overflow-x:hidden}html.site-loading body{overflow:hidden}
+  a{color:inherit;text-decoration:none}img{max-width:100%;display:block}::selection{background:var(--leaf-2);color:var(--ink)}
+  .site-loader{position:fixed;inset:0;z-index:500;display:grid;place-items:center;overflow:hidden;background:var(--ink);opacity:1;visibility:visible;transition:opacity .5s ease,visibility .5s ease}.site-loader::before{content:"";position:absolute;inset:-25%;background:linear-gradient(105deg,transparent 37%,rgba(185,243,75,.035) 45%,rgba(185,243,75,.15) 50%,rgba(255,255,255,.06) 53%,transparent 62%);transform:translateX(-58%);animation:siteShimmer 1.35s ease-in-out infinite}.site-loader-inner{position:relative;z-index:1;display:grid;justify-items:center;gap:24px;width:min(54vw,230px)}.site-loader-logo{width:168px;height:108px;object-fit:contain;filter:drop-shadow(0 18px 32px rgba(0,0,0,.32));animation:loaderMark 1.3s ease-in-out infinite alternate}.site-loader-track{position:relative;display:block;width:100%;height:3px;overflow:hidden;background:rgba(255,255,255,.11)}.site-loader-track::after{content:"";position:absolute;inset:0 auto 0 0;width:42%;background:var(--leaf-2);box-shadow:0 0 14px rgba(185,243,75,.65);animation:loaderTrack 1.05s cubic-bezier(.65,0,.35,1) infinite}.site-ready .site-loader{opacity:0;visibility:hidden;pointer-events:none}
+  .media-shell{position:relative}.media-shimmer{position:absolute;z-index:8;inset:0;overflow:hidden;background:#e8ede5;opacity:1;visibility:visible;pointer-events:none;transition:opacity .42s ease,visibility .42s ease}.media-shimmer::after{content:"";position:absolute;inset:0;background:linear-gradient(105deg,transparent 30%,rgba(255,255,255,.72) 46%,rgba(185,243,75,.25) 51%,rgba(255,255,255,.58) 56%,transparent 72%);transform:translateX(-105%);animation:mediaShimmer 1.15s ease-in-out infinite}.food-media .media-shimmer,.poster .media-shimmer,.reel-frame .media-shimmer{background:#132017}.brand .media-shimmer{background:#0d1810}.media-shell.is-media-loading>img{opacity:.12}.media-shell.is-media-ready>.media-shimmer{opacity:0;visibility:hidden}.media-shell.is-media-ready>img{opacity:1}.media-shell>img{transition:opacity .42s ease}
+  @keyframes siteShimmer{0%{transform:translateX(-58%)}100%{transform:translateX(58%)}}@keyframes loaderMark{from{transform:translateY(2px);filter:drop-shadow(0 12px 24px rgba(0,0,0,.25))}to{transform:translateY(-3px);filter:drop-shadow(0 18px 34px rgba(120,212,33,.2))}}@keyframes loaderTrack{0%{transform:translateX(-110%)}55%{transform:translateX(105%)}100%{transform:translateX(245%)}}@keyframes mediaShimmer{to{transform:translateX(105%)}}
+  .page-progress{position:fixed;inset:0 0 auto;z-index:100;height:3px;background:var(--leaf-2);transform:scaleX(0);transform-origin:left center;will-change:transform;box-shadow:0 0 14px rgba(185,243,75,.65)}
+  .wrap{width:100%;max-width:none;margin:0;padding-inline:10%}
+  .eyebrow{display:inline-flex;align-items:center;gap:10px;font-family:var(--mono);font-size:12px;font-weight:700;letter-spacing:.13em;text-transform:uppercase;color:var(--leaf-2)}
+  .eyebrow::before{content:"";width:28px;height:2px;background:currentColor}
+  h1,h2,h3{font-family:var(--display);font-weight:900;line-height:.96;text-transform:uppercase}
+  h1{font-size:clamp(48px,10vw,112px)}h2{font-size:clamp(34px,6vw,66px)}h3{font-size:clamp(22px,2.5vw,30px)}p{color:#d5dccf}
+  .btn{position:relative;overflow:hidden;display:inline-flex;align-items:center;justify-content:center;gap:10px;min-height:48px;border:1px solid transparent;border-radius:6px;padding:13px 19px;font-family:var(--mono);font-size:12px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;transition:transform .2s ease,background .2s ease,border-color .2s ease,color .2s ease;white-space:nowrap}
+  .btn::after{content:"";position:absolute;inset:-40% auto -40% -45%;width:32%;background:rgba(255,255,255,.3);transform:skewX(-18deg) translateX(-220%);transition:transform .55s ease}.btn:hover::after{transform:skewX(-18deg) translateX(620%)}
+  .btn:hover{transform:translateY(-3px);box-shadow:0 14px 28px rgba(0,0,0,.22)}.btn-primary{background:var(--leaf-2);color:var(--ink)}.btn-primary:hover{background:#d2ff68}.btn-dark{background:var(--ink);color:var(--leaf-2)}.btn-dark:hover{background:#000}.btn-ghost{border-color:var(--line);color:var(--paper);background:rgba(255,255,255,.04)}.btn-ghost:hover{border-color:var(--leaf-2);color:var(--leaf-2)}.btn svg{width:17px;height:17px}
+  :focus-visible{outline:2px solid var(--leaf-2);outline-offset:3px;border-radius:6px}
+  header{position:sticky;top:0;z-index:40;background:rgba(7,16,9,.82);border-bottom:1px solid var(--line);backdrop-filter:blur(16px)}
+  .nav{height:72px;display:flex;align-items:center;justify-content:space-between;gap:20px}
+  .brand{display:flex;align-items:center;flex:0 0 auto;width:102px;height:64px}.brand-logo{width:102px;height:64px;max-width:100%;object-fit:contain;object-position:left center;transform:none;filter:drop-shadow(0 0 0 transparent);transition:transform .3s ease,filter .3s ease}.brand:hover .brand-logo{transform:translateY(-2px) scale(1.025);filter:drop-shadow(0 0 12px rgba(120,212,33,.3))}
+  .nav-links{display:flex;align-items:center;gap:22px}.nav-links a:not(.btn){position:relative;font-family:var(--mono);font-size:11px;letter-spacing:.07em;text-transform:uppercase;color:#b8c2b1;transition:color .2s ease}.nav-links a:not(.btn)::after{content:"";position:absolute;inset:auto 0 -8px;height:2px;background:var(--leaf-2);transform:scaleX(0);transform-origin:right;transition:transform .25s ease}.nav-links a:not(.btn):hover::after{transform:scaleX(1);transform-origin:left}.nav-links a:hover{color:var(--leaf-2)}
+  .menu-btn{display:none;width:44px;height:44px;border:1px solid var(--line);border-radius:6px;background:transparent;color:var(--paper);font-size:22px}
+  .menu-btn span{display:block;width:18px;height:2px;background:currentColor;border-radius:2px;box-shadow:0 6px 0 currentColor,0 -6px 0 currentColor}
+  .hero{--hero-shift:0px;position:relative;overflow:hidden;min-height:calc(100svh - 110px);display:grid;align-items:center;padding:clamp(44px,4.5vw,54px) 0;isolation:isolate}
+  .hero::before{content:"";position:absolute;inset:-3%;z-index:-2;background-image:linear-gradient(90deg,rgba(7,16,9,.98) 0%,rgba(7,16,9,.91) 35%,rgba(7,16,9,.36) 67%,rgba(7,16,9,.08) 100%),url("assets/hero-signature-shakes.png");background-position:center,calc(50% - 210px) center;background-size:cover,calc(100% + 420px) auto;background-repeat:no-repeat;-webkit-mask-image:linear-gradient(90deg,#000 0%,#000 78%,transparent 86.5%);mask-image:linear-gradient(90deg,#000 0%,#000 78%,transparent 86.5%);transform:translate3d(0,var(--hero-shift),0) scale(1.035);animation:heroBreath 10s ease-in-out infinite alternate}
+  .hero::after{content:"";position:absolute;z-index:-1;inset:auto 0 0;height:150px;background:linear-gradient(0deg,var(--ink),transparent)}
+  .hero-grid{position:relative;z-index:1}
+  .hero-copy{max-width:760px;margin-right:auto}
+  .hero h1{margin-top:20px;max-width:760px;font-size:clamp(48px,5vw,72px);text-shadow:0 8px 34px rgba(0,0,0,.38)}.hero h1 span{color:var(--leaf-2)}.hero .lead{max-width:620px;margin-top:22px;font-size:clamp(18px,2vw,22px);color:#edf4e6}
+  .hero-actions{display:flex;gap:13px;flex-wrap:wrap;margin-top:32px}
+  .hero-metrics{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));max-width:570px;margin-top:34px;border-block:1px solid rgba(255,255,255,.18)}
+  .hero-metric{padding:15px 18px 15px 0;border-right:1px solid rgba(255,255,255,.16);transition:background .22s ease,padding .22s ease}.hero-metric+ .hero-metric{padding-left:18px}.hero-metric:last-child{border-right:0}.hero-metric:hover{background:rgba(185,243,75,.08);padding-right:12px}.hero-metric b{display:block;font-family:var(--display);font-size:26px;line-height:1;color:var(--leaf-2)}.hero-metric span{display:block;margin-top:5px;font-family:var(--mono);font-size:9px;text-transform:uppercase;color:#c8d3c2;letter-spacing:.08em}
+  @keyframes heroBreath{from{filter:saturate(1) contrast(1)}to{filter:saturate(1.12) contrast(1.05)}}
+  .strip{background:var(--leaf-2);color:var(--ink);overflow:hidden;border-block:1px solid rgba(255,255,255,.2)}.ticker{display:flex;gap:36px;width:max-content;padding:13px 0;animation:ticker 28s linear infinite}.ticker span{font-family:var(--display);font-weight:900;text-transform:uppercase;white-space:nowrap}@keyframes ticker{to{transform:translateX(-50%)}}@media (prefers-reduced-motion:reduce){.ticker{animation:none;flex-wrap:wrap;width:100%;justify-content:center}}
+  section{padding:clamp(64px,9vw,112px) 0}.section-head{display:flex;justify-content:space-between;align-items:end;gap:30px;margin-bottom:34px}.section-head p{max-width:480px;color:#b7c2af}
+  .menu-note{max-width:480px}
+  .pill-row{display:flex;flex-wrap:wrap;gap:10px;margin-top:22px}.pill{display:inline-flex;align-items:center;gap:9px;min-height:38px;padding:9px 12px;border:1px solid var(--line);border-radius:999px;background:rgba(255,255,255,.04);font-family:var(--mono);font-size:11px;font-weight:700;letter-spacing:.05em;text-transform:uppercase;color:#dce8d5;transition:transform .2s ease,border-color .2s ease,background .2s ease}.pill:hover{transform:translateY(-3px);border-color:var(--leaf-2);background:rgba(185,243,75,.11)}.pill i{width:8px;height:8px;border-radius:50%;background:var(--gold);display:block}
+  .offer-grid{display:grid;grid-template-columns:1fr 1fr 1fr;gap:16px}.offer{border:1px solid var(--line);background:linear-gradient(180deg,rgba(255,255,255,.07),rgba(255,255,255,.025));border-radius:8px;padding:24px;min-height:180px;transition:transform .25s ease,border-color .25s ease,background .25s ease}.offer:hover{transform:translateY(-7px);border-color:var(--leaf-2);background:linear-gradient(180deg,rgba(185,243,75,.12),rgba(255,255,255,.03))}.offer b{display:block;font-family:var(--display);font-size:34px;line-height:1;color:var(--leaf-2);margin-bottom:12px}.offer h3{font-size:22px;margin-bottom:8px}.offer p{font-size:15px;color:#b7c2af}
+  .menu-section{background:var(--cream);color:var(--ink)}.menu-section p,.menu-section .section-head p{color:#4e5b48}.menu-section .eyebrow{color:#316c11}.menu-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:18px}
+  .shake-card{--mx:50%;--my:35%;position:relative;display:grid;grid-template-rows:auto auto 1fr auto auto;min-height:520px;border:1px solid var(--line-dark);border-radius:8px;background:#fff;overflow:hidden;box-shadow:0 18px 38px rgba(29,42,20,.08);transition:transform .32s cubic-bezier(.2,.8,.2,1),border-color .25s ease,box-shadow .32s ease}
+  .shake-card::before{content:"";position:absolute;z-index:0;inset:0;background:radial-gradient(circle at var(--mx) var(--my),rgba(185,243,75,.24),transparent 36%),linear-gradient(135deg,rgba(120,212,33,.12),transparent 36%,rgba(245,190,50,.12));opacity:0;transition:opacity .3s ease;pointer-events:none}
+  .shake-card>*{position:relative;z-index:1}
+  .shake-card:hover{transform:translateY(-11px) scale(1.012);border-color:rgba(47,128,16,.5);box-shadow:0 30px 66px rgba(29,42,20,.2)}
+  .shake-card:hover::before{opacity:1}
+  .shake-top{display:grid;grid-template-columns:auto 1fr;gap:12px;align-items:start;padding:18px 18px 0}.shake-no{width:34px;height:34px;border-radius:50%;display:grid;place-items:center;background:#2f8010;color:#fff;font-family:var(--display);font-size:18px;font-weight:900}.shake-card h3{font-size:25px;color:#152112;line-height:.97}.shake-desc{padding:12px 18px 0;font-size:14.5px;line-height:1.42;color:#4e5b48}
+  .shake-art{position:relative;height:235px;margin:2px 12px 0;display:grid;place-items:center;overflow:hidden;isolation:isolate}.shake-art::after{content:"";position:absolute;z-index:3;top:9px;left:50%;width:142px;height:74px;background:url("assets/effects/protein-shake-overflow.png") center/contain no-repeat;opacity:0;pointer-events:none;filter:hue-rotate(var(--spill-hue,0deg)) saturate(var(--spill-sat,1.05)) brightness(var(--spill-bright,1)) drop-shadow(0 6px 5px rgba(35,22,12,.24));transform:translate(-50%,18px) scale(.68,.24);transform-origin:50% 28%;will-change:transform,opacity}.shake-photo{position:relative;z-index:1;width:100%;height:230px;object-fit:contain;filter:drop-shadow(0 18px 18px rgba(47,49,26,.2));transform-origin:50% 62%;transition:transform .35s ease,filter .35s ease}.shake-card:hover .shake-art::after{animation:photoOverflow 1.45s cubic-bezier(.18,.78,.2,1) both}.shake-card:hover .shake-photo{animation:glassServe 1.45s cubic-bezier(.2,.8,.2,1) both;filter:drop-shadow(0 24px 22px rgba(47,49,26,.3)) saturate(1.08)}
+  @keyframes photoOverflow{0%{opacity:0;transform:translate(-50%,18px) scale(.68,.24)}18%{opacity:.9;transform:translate(-50%,3px) scale(.88,.62)}38%{opacity:1;transform:translate(-50%,-4px) scale(1.02,.96)}62%{opacity:1;transform:translate(-50%,0) scale(.98,1.04)}82%{opacity:.82;transform:translate(-50%,8px) scale(.95,1.1)}100%{opacity:0;transform:translate(-50%,30px) scale(.9,1.14)}}@keyframes glassServe{0%,100%{transform:translateY(0) rotate(0)}20%{transform:translateY(-5px) rotate(-.8deg)}42%{transform:translateY(-7px) rotate(.7deg)}64%{transform:translateY(-4px) rotate(-.4deg)}82%{transform:translateY(-1px) rotate(.2deg)}}
+  .macros{display:grid;grid-template-columns:repeat(4,1fr);background:#153817;color:white;margin:14px 0 0}.macro{min-width:0;padding:10px 6px;text-align:center;border-right:1px solid rgba(255,255,255,.14)}.macro:last-child{border-right:0}.macro b{display:block;font-family:var(--display);font-size:19px;line-height:1;color:#fff}.macro span{display:block;font-family:var(--mono);font-size:9px;text-transform:uppercase;color:#bfd6b5;margin-top:2px}
+  .prices{display:grid;grid-template-columns:1fr 1fr;border-top:1px solid var(--line-dark);margin-top:auto}.price{padding:13px 10px;text-align:center;border-right:1px solid var(--line-dark)}.price:last-child{border-right:0}.price span{display:block;font-family:var(--mono);font-size:11px;color:#5d6c55}.price b{font-family:var(--display);font-size:24px;color:#172214}.price.unavailable b{font-size:13px;letter-spacing:.04em}
+  .note-band{display:grid;grid-template-columns:auto 1fr auto;gap:18px;align-items:center;margin-top:24px;padding:20px 22px;border-radius:8px;background:#112114;color:var(--paper)}.note-band strong{font-family:var(--display);font-size:clamp(26px,4vw,44px);text-transform:uppercase;color:var(--leaf-2);line-height:1}.note-band p{color:#d6e3cf}.note-band .save{font-family:var(--display);font-size:clamp(32px,5vw,58px);font-weight:900;color:var(--leaf-2);white-space:nowrap}
+  .process{display:grid;grid-template-columns:repeat(5,1fr);gap:12px}.step{background:var(--ink-2);border:1px solid var(--line);border-radius:8px;padding:20px 16px;min-height:150px;transition:transform .25s ease,border-color .25s ease,background .25s ease}.step:hover{transform:translateY(-7px);border-color:var(--leaf-2);background:var(--ink-3)}.step .num{font-family:var(--mono);font-size:12px;color:var(--leaf-2);font-weight:700;margin-bottom:28px}.step h3{font-size:19px;margin-bottom:8px}.step p{font-size:14.5px;color:#b7c2af}
+  .proof-grid{display:grid;grid-template-columns:.9fr 1.1fr;gap:28px;align-items:start}.poster{background:rgba(255,255,255,.05);border:1px solid var(--line);border-radius:8px;padding:10px;box-shadow:var(--shadow);transition:transform .25s ease,border-color .25s ease}.poster:hover{transform:translateY(-6px);border-color:var(--leaf-2)}.poster img{border-radius:5px;width:100%;height:auto}.proof-copy{display:grid;gap:16px}.proof-card{background:rgba(255,255,255,.05);border:1px solid var(--line);border-radius:8px;padding:22px;transition:transform .25s ease,border-color .25s ease,background .25s ease}.proof-card:hover{transform:translateY(-6px);border-color:var(--leaf-2);background:rgba(185,243,75,.08)}.proof-card h3{font-size:22px;margin-bottom:8px}.proof-card p{font-size:15.5px;color:#c4cfbd}
+  .food-section{position:relative;background:#0a120d;color:var(--paper);overflow:hidden}.food-section::before{content:"";position:absolute;inset:0;background:linear-gradient(90deg,rgba(185,243,75,.035) 1px,transparent 1px),linear-gradient(rgba(185,243,75,.025) 1px,transparent 1px);background-size:72px 72px;mask-image:linear-gradient(180deg,black,transparent 88%);pointer-events:none}.food-section .wrap{position:relative}.food-head{display:grid;grid-template-columns:minmax(0,1fr) minmax(320px,.72fr);align-items:end;gap:34px;margin-bottom:28px}.food-head p{color:#b9c7b3;max-width:520px}.food-filters{display:flex;gap:6px;flex-wrap:wrap;margin-bottom:30px}.food-filter{min-height:40px;border:1px solid var(--line);border-radius:6px;background:#101b13;color:#b9c7b3;padding:9px 13px;font-family:var(--mono);font-weight:700;font-size:10px;letter-spacing:.06em;text-transform:uppercase;cursor:pointer;transition:transform .2s ease,border-color .2s ease,background .2s ease,color .2s ease}.food-filter:hover{transform:translateY(-3px);border-color:var(--leaf-2);color:var(--leaf-2)}.food-filter.is-active{background:var(--leaf-2);border-color:var(--leaf-2);color:var(--ink)}
+  .food-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:18px;perspective:1200px}.food-card{--mx:50%;--my:40%;--rx:0deg;--ry:0deg;position:relative;display:grid;grid-template-rows:250px 1fr auto;min-height:520px;background:#101b13;border:1px solid rgba(255,255,255,.12);border-radius:8px;overflow:hidden;box-shadow:0 20px 46px rgba(0,0,0,.24);transform:perspective(1100px) rotateX(var(--rx)) rotateY(var(--ry));transform-style:preserve-3d;transition:transform .24s ease,border-color .24s ease,box-shadow .24s ease,opacity .28s ease}.food-card::after{content:"";position:absolute;inset:0;background:radial-gradient(circle at var(--mx) var(--my),rgba(185,243,75,.15),transparent 34%);opacity:0;pointer-events:none;transition:opacity .25s ease}.food-card:hover{border-color:rgba(185,243,75,.58);box-shadow:0 30px 70px rgba(0,0,0,.42)}.food-card:hover::after{opacity:1}.food-card.is-hidden{display:none}.food-media{position:relative;overflow:hidden;background:#050805}.food-media::after{content:"";position:absolute;inset:auto 0 0;height:70px;background:linear-gradient(0deg,#101b13,transparent);pointer-events:none}.food-media img{width:100%;height:100%;object-fit:cover;object-position:var(--focus,50% 55%);transition:transform .65s cubic-bezier(.2,.8,.2,1),filter .4s ease,opacity .38s ease}.food-media .food-swap{position:absolute;inset:0;opacity:0}.food-card:hover .food-media img{transform:scale(1.085);filter:saturate(1.12) contrast(1.04)}.food-card:hover .food-media .food-swap-base{opacity:0}.food-card:hover .food-media .food-swap{opacity:1}.food-chip{position:absolute;z-index:2;top:14px;left:14px;padding:6px 9px;border-radius:999px;background:var(--leaf-2);color:var(--ink);font-family:var(--mono);font-size:9px;font-weight:700;text-transform:uppercase;letter-spacing:.06em}.food-body{padding:18px 18px 15px}.food-body h3{font-size:25px;line-height:1}.food-body p{margin-top:9px;color:#b9c7b3;font-size:14.5px;line-height:1.42}.food-macros{display:grid;grid-template-columns:repeat(4,1fr);margin-top:16px;border-block:1px solid rgba(255,255,255,.11)}.food-macro{min-width:0;padding:10px 4px;text-align:center;border-right:1px solid rgba(255,255,255,.1)}.food-macro:last-child{border-right:0}.food-macro b{display:block;color:var(--leaf-2);font-family:var(--display);font-size:17px;line-height:1}.food-macro span{display:block;margin-top:3px;color:#82907d;font-family:var(--mono);font-size:8px;text-transform:uppercase}.food-foot{display:flex;align-items:center;justify-content:space-between;gap:12px;padding:14px 18px;border-top:1px solid rgba(255,255,255,.11)}.food-price{font-family:var(--display);font-size:25px;font-weight:900;color:#fff}.food-price.is-ask{max-width:170px;font-size:14px;line-height:1.2}.food-price small{display:block;font-family:var(--mono);font-size:8px;color:#84917f;text-transform:uppercase}.poster-link{position:relative;z-index:3;display:inline-flex;align-items:center;min-height:36px;border:1px solid rgba(255,255,255,.18);border-radius:5px;padding:8px 10px;color:#cbd5c6;font-family:var(--mono);font-size:9px;font-weight:700;text-transform:uppercase;transition:background .2s ease,color .2s ease,border-color .2s ease}.poster-link:hover{background:var(--leaf-2);border-color:var(--leaf-2);color:var(--ink)}
+  .reels-section{position:relative;background:#050805;color:var(--paper);overflow:hidden;border-top:1px solid rgba(185,243,75,.16)}.reels-section::before{content:"";position:absolute;inset:0;background:linear-gradient(90deg,rgba(185,243,75,.035) 1px,transparent 1px),linear-gradient(rgba(185,243,75,.025) 1px,transparent 1px);background-size:72px 72px;mask-image:linear-gradient(180deg,black,transparent 88%);pointer-events:none}.reels-section .wrap{position:relative}.reels-section .section-head p{color:#b9c7b3}.reel-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:18px}.reel-card{position:relative;height:clamp(600px,53vw,680px);border:1px solid rgba(255,255,255,.15);border-radius:8px;background:#000;overflow:hidden;isolation:isolate;box-shadow:0 24px 54px rgba(0,0,0,.34);transition:transform .3s cubic-bezier(.2,.8,.2,1),box-shadow .3s ease,border-color .3s ease}.reel-card::after{content:"";position:absolute;z-index:2;inset:0;background:linear-gradient(180deg,rgba(0,0,0,.05) 42%,rgba(0,0,0,.94) 100%);pointer-events:none;transition:opacity .35s ease}.reel-card:hover,.reel-card.is-active{transform:translateY(-9px) scale(1.01);border-color:var(--leaf-2);box-shadow:0 34px 74px rgba(0,0,0,.52),0 0 0 1px rgba(185,243,75,.14)}.reel-card:hover::after,.reel-card.is-active::after{opacity:0}.reel-frame{position:absolute;inset:0;background:#000;overflow:hidden}.reel-frame iframe{width:100%;height:100%;border:0;background:#000;pointer-events:none;filter:saturate(.82) contrast(1.04);transform:scale(1.01);transition:filter .35s ease,transform .6s ease}.reel-card:hover .reel-frame iframe,.reel-card.is-active .reel-frame iframe{pointer-events:auto;filter:none;transform:scale(1)}.reel-copy{position:absolute;z-index:3;inset:auto 0 0;padding:110px 20px 22px;background:linear-gradient(0deg,rgba(0,0,0,.98),transparent);pointer-events:none;transition:opacity .3s ease,transform .35s ease}.reel-card:hover .reel-copy,.reel-card.is-active .reel-copy{opacity:0;transform:translateY(18px)}.reel-copy::before{content:"";position:absolute;left:20px;bottom:100%;width:52px;height:3px;background:var(--leaf-2)}.reel-index{font-family:var(--mono);font-size:10px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--leaf-2)}.reel-copy h3{margin-top:9px;font-size:24px;color:#fff}.reel-copy p{margin-top:10px;color:#ccd6c7;font-size:15px}.reel-link{display:inline-flex;margin-top:16px;border-bottom:1px solid currentColor;color:var(--leaf-2);font-family:var(--mono);font-size:10px;font-weight:700;text-transform:uppercase;pointer-events:auto;transition:color .2s ease,transform .2s ease}.reel-link:hover{color:#fff;transform:translateX(4px)}
+  .faq-section{background:var(--cream);color:var(--ink)}.faq-section .eyebrow{color:#2f6f12}.faq-layout{display:grid;grid-template-columns:minmax(260px,.7fr) minmax(0,1.3fr);gap:clamp(34px,7vw,90px);align-items:start}.faq-layout>*{min-width:0}.faq-intro{position:sticky;top:110px}.faq-intro h2{font-size:clamp(34px,3.6vw,50px);line-height:1;overflow-wrap:anywhere}.faq-intro p{margin-top:18px;color:#566250;max-width:430px}.faq-source{display:inline-flex;margin-top:20px;font-family:var(--mono);font-size:9px;font-weight:700;text-transform:uppercase;color:#316c11;border-bottom:1px solid currentColor}.faq-list{min-width:0;border-top:1px solid rgba(7,16,9,.18)}.faq-item{border-bottom:1px solid rgba(7,16,9,.18)}.faq-item summary{list-style:none;display:grid;grid-template-columns:minmax(0,1fr) 34px;gap:18px;align-items:center;padding:22px 0;cursor:pointer;font-family:var(--display);font-size:clamp(18px,2vw,23px);font-weight:800;line-height:1.12;text-transform:uppercase;color:#152112;transition:color .2s ease}.faq-item summary::-webkit-details-marker{display:none}.faq-item summary::after{content:"+";width:32px;height:32px;border:1px solid rgba(7,16,9,.2);border-radius:50%;display:grid;place-items:center;font-family:var(--body);font-size:22px;font-weight:500;transition:transform .25s ease,background .25s ease,color .25s ease}.faq-item summary:hover{color:#347313}.faq-item summary:hover::after{background:var(--leaf-2)}.faq-item[open] summary::after{content:"-";transform:rotate(180deg);background:#173619;color:var(--leaf-2)}.faq-answer{padding:0 58px 24px 0;color:#53604d;max-width:790px}.faq-answer a{color:#316c11;text-decoration:underline;text-underline-offset:3px}
+  .cta{background:var(--leaf-2);color:var(--ink);padding:clamp(54px,7vw,76px) 0}.cta-grid{display:flex;align-items:center;justify-content:space-between;gap:28px;flex-wrap:wrap}.cta h2{color:var(--ink);max-width:720px}.cta p{color:#314027;margin-top:12px;max-width:620px;font-weight:700}
+  footer{padding:48px 0 28px;background:var(--ink-2);border-top:1px solid var(--line)}.foot{display:grid;grid-template-columns:1.2fr 1fr 1fr 1.1fr;gap:30px}footer h4{font-family:var(--mono);font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--muted);margin-bottom:14px}footer a,footer p{display:block;color:#c9d3c1;font-size:14.5px;margin-bottom:9px}footer a:hover{color:var(--leaf-2)}.bottom{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;border-top:1px solid var(--line);margin-top:34px;padding-top:20px}.bottom p{font-family:var(--mono);font-size:11px;color:var(--muted)}
+  .fab{position:fixed;right:18px;bottom:18px;z-index:50;width:56px;height:56px;border-radius:50%;display:grid;place-items:center;background:var(--leaf-2);color:var(--ink);box-shadow:0 16px 34px rgba(0,0,0,.38);transition:transform .22s ease,box-shadow .22s ease}.fab:hover{transform:translateY(-4px) scale(1.06);box-shadow:0 20px 44px rgba(0,0,0,.46)}.fab svg{width:26px;height:26px}
+  .rise{opacity:0;transform:translateY(22px);transition:opacity .65s ease,transform .65s ease}.rise.in{opacity:1;transform:none}.food-card.rise.in{transform:perspective(1100px) rotateX(var(--rx)) rotateY(var(--ry))}@media (prefers-reduced-motion:reduce){.rise{opacity:1;transform:none;transition:none}.food-card.rise.in{transform:none}}
+  @media (hover:hover){.offer.rise.in:hover,.step.rise.in:hover,.poster.rise.in:hover,.proof-card.rise.in:hover{transform:translateY(-7px)}.shake-card.rise.in:hover{transform:translateY(-11px) scale(1.012)}.reel-card.rise.in:hover{transform:translateY(-9px) scale(1.01)}}
+  @media (max-width:1100px){.nav-links{gap:15px}.nav-links a:not(.btn){font-size:10px}.food-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.reel-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.reel-card:last-child{grid-column:1/-1;width:min(100%,560px);justify-self:center}}
+  @media (max-width:1020px){.menu-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.process{grid-template-columns:repeat(3,1fr)}.offer-grid{grid-template-columns:1fr 1fr}.proof-grid{grid-template-columns:1fr}}
+  @media (max-width:860px){.nav-links{position:fixed;inset:72px 0 auto;display:grid;gap:0;background:var(--ink-2);border-bottom:1px solid var(--line);max-height:0;overflow:hidden;transition:max-height .28s ease}.nav-links.open{max-height:580px}.nav-links a{padding:14px 24px;border-bottom:1px solid var(--line)}.nav-links .btn{margin:12px 20px}.menu-btn{display:grid;place-items:center}.section-head,.food-head{display:grid}.food-head{grid-template-columns:1fr}.faq-layout{grid-template-columns:1fr}.faq-intro{position:static}}
+  @media (max-height:820px) and (min-width:681px){.hero{padding:42px 0}.hero h1{font-size:clamp(46px,4.7vw,66px)}.hero .pill-row{display:none}.hero-metrics{margin-top:26px}}
+  @media (hover:none){.shake-card:active .shake-art::after{animation:photoOverflow 1.45s cubic-bezier(.18,.78,.2,1) both}.shake-card:active .shake-photo{animation:glassServe 1.45s cubic-bezier(.2,.8,.2,1) both}.reel-frame iframe{pointer-events:auto}.reel-card:active{border-color:var(--leaf-2)}}
+  @media (prefers-reduced-motion:reduce){.hero::before,.shake-card:hover .shake-art::after,.shake-card:hover .shake-photo,.shake-card:active .shake-art::after,.shake-card:active .shake-photo,.site-loader::before,.site-loader-logo,.site-loader-track::after,.media-shimmer::after{animation:none}.ticker{animation:none}}
+  @media (max-width:680px){body{font-size:16px}.hero{min-height:auto;align-items:end;padding:200px 0 32px}.hero::before{inset:0;background-image:linear-gradient(180deg,rgba(7,16,9,.05) 0%,rgba(7,16,9,.18) 25%,rgba(7,16,9,.94) 48%,var(--ink) 68%),url("assets/hero-signature-shakes.png");background-size:100% 100%,auto 250px;background-position:center top,calc(50% - 48px) top;-webkit-mask-image:linear-gradient(90deg,#000 0%,#000 80%,transparent 90%);mask-image:linear-gradient(90deg,#000 0%,#000 80%,transparent 90%);transform:none;animation:none}.hero::after{display:none}.hero h1{font-size:clamp(40px,11vw,52px)}.hero .lead{margin-top:16px;font-size:17px;line-height:1.48}.hero .hero-actions{margin-top:22px;gap:10px}.hero .pill-row,.hero-metrics,.fab{display:none}.hero-actions,.cta-grid{align-items:stretch}.btn{width:100%;white-space:normal;text-align:center}.offer-grid,.menu-grid,.process,.foot,.food-grid,.reel-grid{grid-template-columns:1fr}.reel-card,.reel-card:last-child{grid-column:auto;width:100%;height:640px}.shake-card{min-height:0}.shake-art{height:250px}.shake-photo{height:245px}.food-card{min-height:500px;grid-template-rows:235px 1fr auto}.food-filters{flex-wrap:nowrap;overflow-x:auto;padding-bottom:5px;scrollbar-width:none}.food-filter{flex:0 0 auto}.note-band{grid-template-columns:1fr;text-align:left}.note-band .save{white-space:normal}.poster{padding:7px}.faq-item summary{padding:19px 0;font-size:19px}.faq-answer{padding-right:0}}
+  @media (max-width:390px){.macro b{font-size:17px}.macro span{font-size:8px}.shake-card h3{font-size:23px}.hero{padding-top:210px}}
 </style>
 </head>
 <body>
-
-<!-- ===== HEADER ===== -->
+<div class="site-loader" id="siteLoader" role="status" aria-label="Loading 5G Nutrition">
+  <div class="site-loader-inner"><img class="site-loader-logo" src="assets/brand/5g-nutrition-logo-transparent.png" alt="" aria-hidden="true" /><span class="site-loader-track" aria-hidden="true"></span></div>
+</div>
+<div class="page-progress" id="pageProgress" aria-hidden="true"></div>
 <header>
   <div class="wrap nav">
-    <a href="#top" class="brand" aria-label="5G Nutrition home">
-      <span class="bars" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i></span>
-      <span><span class="g5">5G</span> Nutrition</span>
-    </a>
+    <a class="brand" href="#top" aria-label="5G Nutrition home"><img class="brand-logo" src="assets/brand/5g-nutrition-logo-transparent.png" alt="5G Nutrition - Your Daily Protein Connection" width="1408" height="896" /></a>
     <nav class="nav-links" id="menu">
-      <a href="#range">Range</a>
-      <a href="#brands">Brands</a>
-      <a href="#why">Why 5G</a>
-      <a href="#order">How to order</a>
-      <a href="#contact">Contact</a>
-      <a class="btn btn-primary" href="#order">Order on WhatsApp</a>
+      <a href="#top">Home</a><a href="#menu-list">Shakes</a><a href="#food-menu">Food menu</a><a href="#learn">Learn</a><a href="#order">Order</a><a href="#contact">Contact</a>
+      <a class="btn btn-primary" href="https://www.instagram.com/5g.nutrition/" target="_blank" rel="noopener">DM Instagram</a>
     </nav>
-    <button class="menu-btn" id="menuBtn" aria-label="Toggle menu" aria-expanded="false">☰</button>
+    <button class="menu-btn" id="menuBtn" aria-label="Toggle menu" aria-expanded="false"><span aria-hidden="true"></span></button>
   </div>
 </header>
-
 <main id="top">
-
-<!-- ===== HERO ===== -->
-<section class="hero">
-  <div class="hero-glow" aria-hidden="true"></div>
-  <div class="hero-field" aria-hidden="true">
-    <span style="animation-delay:0s"></span><span style="animation-delay:.2s"></span>
-    <span style="animation-delay:.4s"></span><span style="animation-delay:.6s"></span>
-    <span style="animation-delay:.8s"></span><span style="animation-delay:1s"></span>
-    <span style="animation-delay:1.2s"></span><span style="animation-delay:1.4s"></span>
-  </div>
-  <div class="wrap">
-    <div class="hero-inner">
-      <span class="eyebrow"><span class="bars" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i></span>&nbsp; Srinagar · Kashmir</span>
-      <h1>Fuel the <em>next</em><br /><span class="out">rep.</span></h1>
-      <p class="lead">Kashmir's home for 100% genuine sports nutrition — whey, mass gainers, creatine, pre-workout and more. Verified authentic, priced fair, delivered across the Valley.</p>
-      <div class="hero-cta">
-        <a class="btn btn-primary" href="#order">
-          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2a10 10 0 0 0-8.7 15l-1.3 4.7 4.8-1.3A10 10 0 1 0 12 2Zm5.5 14.2c-.2.6-1.2 1.2-1.7 1.2-.4 0-.9.2-3-1-2.5-1.4-4-4-4.2-4.2-.1-.2-1-1.3-1-2.5s.6-1.7.8-2c.2-.2.4-.3.6-.3h.5c.2 0 .4 0 .6.5l.8 2c.1.2.1.4 0 .5l-.4.5c-.2.2-.3.3-.1.6.2.3.8 1.3 1.7 2 .9.7 1.4.9 1.7 1 .2.1.4.1.5-.1l.7-.8c.2-.2.3-.2.6-.1l1.9.9c.3.1.5.2.5.4v1.2Z"/></svg>
-          Order on WhatsApp
-        </a>
-        <a class="btn btn-ghost" href="#range">Browse the range</a>
-      </div>
-      <div class="hero-meta">
-        <div class="m"><span class="n"><span>100%</span></span><span class="l">Genuine, verified</span></div>
-        <div class="m"><span class="n">40<span>+</span></span><span class="l">Global brands</span></div>
-        <div class="m"><span class="n">24h</span><span class="l">Valley delivery</span></div>
+  <section class="hero">
+    <div class="wrap hero-grid">
+      <div class="hero-copy rise">
+        <span class="eyebrow">Freshly blending in Srinagar</span>
+        <h1>Protein shakes. <span>Clean meals.</span> Built for goals.</h1>
+        <p class="lead">Fresh shakes, power bowls, wraps, oats, yoghurt, parfaits, salads, toast, and protein coffee made around real ingredients and clear nutrition.</p>
+        <div class="hero-actions"><a class="btn btn-primary" href="#food-menu">Explore full menu</a><a class="btn btn-ghost" href="#menu-list">View 12 shakes</a></div>
+        <div class="pill-row"><span class="pill"><i></i>Premium ingredients</span><span class="pill"><i></i>No artificial colours</span><span class="pill"><i></i>Whey / no-whey options</span><span class="pill"><i></i>Delivered around Srinagar</span></div>
+        <div class="hero-metrics"><div class="hero-metric"><b>12</b><span>signature shakes</span></div><div class="hero-metric"><b>13+</b><span>clean eats</span></div><div class="hero-metric"><b>Rs 99</b><span>food starting at</span></div></div>
       </div>
     </div>
-  </div>
-</section>
-
-<!-- ===== TRUST STRIP ===== -->
-<div class="strip">
-  <div class="wrap">
-    <div class="t"><span class="dot"></span><b>100% Genuine</b>&nbsp;— every tub verified</div>
-    <div class="t"><span class="dot"></span>Free delivery across Kashmir</div>
-    <div class="t"><span class="dot"></span>QR / COA authenticity check</div>
-    <div class="t"><span class="dot"></span>Cash on delivery</div>
-  </div>
-</div>
-
-<!-- ===== CATEGORIES ===== -->
-<section class="blk" id="range">
-  <div class="wrap">
-    <div class="head rise">
-      <div>
-        <span class="eyebrow fog">The range</span>
-        <h2 style="margin-top:16px">Stack your goals</h2>
-      </div>
-      <p>From your first scoop to your heaviest cut — everything you need, all of it real. Tap any category and message us to check live stock.</p>
+  </section>
+  <div class="strip" aria-label="5G Nutrition highlights"><div class="ticker"><span>12 signature protein shakes</span><span>Power bowls</span><span>Protein wraps</span><span>Oats and yoghurt</span><span>Protein coffee</span><span>Made fresh to order</span><span>12 signature protein shakes</span><span>Power bowls</span><span>Protein wraps</span><span>Oats and yoghurt</span><span>Protein coffee</span><span>Made fresh to order</span></div></div>
+  <section>
+    <div class="wrap">
+      <div class="section-head rise"><div><span class="eyebrow">Why it works</span><h2 style="margin-top:16px">Built for goals</h2></div><p>Each shake pairs protein with familiar whole ingredients: dates, oats, nuts, seeds, berries, coffee, saffron, pistachio, and Kashmiri-style blends.</p></div>
+      <div class="offer-grid"><article class="offer rise"><b>47g</b><h3>Protein-focused</h3><p>Top shakes reach up to 47g protein, with lean and calorie-dense options side by side.</p></article><article class="offer rise"><b>12</b><h3>Signature choices</h3><p>From Sultan Bulk and Peanut Power Pro to Snow Leopard Lean and Cold Coffee Pro.</p></article><article class="offer rise"><b>Rs 70</b><h3>No-whey saving</h3><p>Prefer without whey? Save Rs 70 on both 350 ml and 500 ml sizes.</p></article></div>
     </div>
-    <div class="cats">
-      <a class="cat rise" href="#order"><span class="idx">01</span><span class="bars" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i></span><h3>Whey Protein</h3><p>Concentrate, isolate & blends for lean muscle and recovery.</p></a>
-      <a class="cat rise" href="#order"><span class="idx">02</span><span class="bars" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i></span><h3>Mass Gainers</h3><p>High-calorie fuel to push through a stubborn bulk.</p></a>
-      <a class="cat rise" href="#order"><span class="idx">03</span><span class="bars" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i></span><h3>Creatine</h3><p>Monohydrate & micronized for strength and output.</p></a>
-      <a class="cat rise" href="#order"><span class="idx">04</span><span class="bars" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i></span><h3>Pre-Workout</h3><p>Clean energy, focus and pump for the hard sessions.</p></a>
-      <a class="cat rise" href="#order"><span class="idx">05</span><span class="bars" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i></span><h3>BCAA / EAA</h3><p>Intra-workout aminos to protect and rebuild muscle.</p></a>
-      <a class="cat rise" href="#order"><span class="idx">06</span><span class="bars" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i></span><h3>Vitamins & Wellness</h3><p>Multivitamins, omega-3, ZMA and daily health support.</p></a>
-      <a class="cat rise" href="#order"><span class="idx">07</span><span class="bars" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i></span><h3>Fat Burners</h3><p>Thermogenics and L-carnitine to support your cut.</p></a>
-      <a class="cat rise" href="#order"><span class="idx">08</span><span class="bars" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i></span><h3>Shakers & Gear</h3><p>Bottles, wrist wraps, belts and everyday training kit.</p></a>
-    </div>
-  </div>
-</section>
-
-<!-- ===== BRANDS ===== -->
-<section class="brands" id="brands">
-  <div class="label">Authorised & authentic — top brands we stock</div>
-  <div class="marquee" aria-label="Brands we stock">
-    <span>Optimum Nutrition</span><span>MuscleBlaze</span><span>Dymatize</span><span>Ultimate Nutrition</span><span>GNC</span><span>Isopure</span><span>BSN</span><span>MyProtein</span><span>Avvatar</span><span>AS-IT-IS</span>
-    <span>Optimum Nutrition</span><span>MuscleBlaze</span><span>Dymatize</span><span>Ultimate Nutrition</span><span>GNC</span><span>Isopure</span><span>BSN</span><span>MyProtein</span><span>Avvatar</span><span>AS-IT-IS</span>
-  </div>
-</section>
-
-<!-- ===== WHY / AUTHENTICITY ===== -->
-<section class="blk why" id="why">
-  <div class="wrap why-grid">
-    <div class="rise">
-      <span class="eyebrow amber">Why 5G Nutrition</span>
-      <h2>No fakes.<br /><em>No excuses.</em></h2>
-      <p style="color:var(--fog);max-width:460px;margin-bottom:8px">The valley is full of counterfeit supplements. We built 5G Nutrition so lifters here never have to gamble on what they put in their body.</p>
-      <div class="feat">
-        <span class="k">01</span>
-        <div><h3>Every tub, verified</h3><p>Scan the QR or check the batch COA in-store. If it isn't genuine, we don't sell it — simple as that.</p></div>
+  </section>
+  <section class="menu-section" id="menu-list">
+    <div class="wrap">
+      <div class="section-head rise"><div><span class="eyebrow">Final shake menu</span><h2 style="margin-top:16px">12 signature shakes</h2></div><div class="menu-note"><p>Nutrition values are approximate and may vary based on ingredient brands. Prices shown are for 350 ml and 500 ml.</p></div></div>
+      <div class="menu-grid">
+        <article class="shake-card rise" style="--top-a:#d39a43;--top-b:#6b351b;--spill-hue:0deg;--spill-sat:1.05;--spill-bright:.96">
+          <div class="shake-top"><span class="shake-no">1</span><h3>Sultan Bulk</h3></div>
+          <p class="shake-desc">High-calorie protein shake with banana, almonds, dates, and serious bulk energy.</p>
+          <div class="shake-art"><img class="shake-photo" src="assets/shakes/sultan-bulk.png" alt="Sultan Bulk banana, almond, and date protein shake" loading="lazy" decoding="async" width="760" height="760" /></div>
+          <div class="macros"><div class="macro"><b>775</b><span>kcal</span></div><div class="macro"><b>47g</b><span>protein</span></div><div class="macro"><b>88g</b><span>carbs</span></div><div class="macro"><b>29g</b><span>fat</span></div></div>
+          <div class="prices"><div class="price"><span>350 ml</span><b>Rs 239</b></div><div class="price"><span>500 ml</span><b>Rs 299</b></div></div>
+        </article>
+        <article class="shake-card rise" style="--top-a:#ba6d21;--top-b:#f1d18d;--spill-hue:-5deg;--spill-sat:.95;--spill-bright:.98">
+          <div class="shake-top"><span class="shake-no">2</span><h3>Peanut Power Pro</h3></div>
+          <p class="shake-desc">Peanut butter, oats, banana, and almonds for strength and lasting energy.</p>
+          <div class="shake-art"><img class="shake-photo" src="assets/shakes/peanut-power-pro.png" alt="Peanut Power Pro shake with peanuts, banana, oats, and almonds" loading="lazy" decoding="async" width="760" height="760" /></div>
+          <div class="macros"><div class="macro"><b>720</b><span>kcal</span></div><div class="macro"><b>45g</b><span>protein</span></div><div class="macro"><b>62g</b><span>carbs</span></div><div class="macro"><b>35g</b><span>fat</span></div></div>
+          <div class="prices"><div class="price"><span>350 ml</span><b>Rs 223</b></div><div class="price"><span>500 ml</span><b>Rs 279</b></div></div>
+        </article>
+        <article class="shake-card rise" style="--top-a:#55751c;--top-b:#a95a2f;--spill-hue:56deg;--spill-sat:.86;--spill-bright:.9">
+          <div class="shake-top"><span class="shake-no">3</span><h3>Kashmiri Shardai Pro</h3></div>
+          <p class="shake-desc">Traditional Kashmiri shardai with saffron, nuts, and seeds in a modern protein upgrade.</p>
+          <div class="shake-art"><img class="shake-photo" src="assets/shakes/kashmiri-shardai-pro.png" alt="Kashmiri Shardai Pro with saffron, pistachios, almonds, and seeds" loading="lazy" decoding="async" width="760" height="760" /></div>
+          <div class="macros"><div class="macro"><b>540</b><span>kcal</span></div><div class="macro"><b>37g</b><span>protein</span></div><div class="macro"><b>32g</b><span>carbs</span></div><div class="macro"><b>32g</b><span>fat</span></div></div>
+          <div class="prices"><div class="price"><span>350 ml</span><b>Rs 223</b></div><div class="price"><span>500 ml</span><b>Rs 279</b></div></div>
+        </article>
+        <article class="shake-card rise" style="--top-a:#6f3e20;--top-b:#c58243;--spill-hue:-8deg;--spill-sat:1.18;--spill-bright:.76">
+          <div class="shake-top"><span class="shake-no">4</span><h3>Lotus Biscoff Boost</h3></div>
+          <p class="shake-desc">Irresistible Biscoff flavour with a protein boost in a dessert-style shake.</p>
+          <div class="shake-art"><img class="shake-photo" src="assets/shakes/lotus-biscoff-boost.png" alt="Lotus Biscoff Boost shake with caramelized biscuit and cookie butter" loading="lazy" decoding="async" width="760" height="760" /></div>
+          <div class="macros"><div class="macro"><b>395</b><span>kcal</span></div><div class="macro"><b>27g</b><span>protein</span></div><div class="macro"><b>35g</b><span>carbs</span></div><div class="macro"><b>14g</b><span>fat</span></div></div>
+          <div class="prices"><div class="price"><span>350 ml</span><b>Rs 239</b></div><div class="price"><span>500 ml</span><b>Rs 299</b></div></div>
+        </article>
+        <article class="shake-card rise" style="--top-a:#7b3e1e;--top-b:#d3aa45;--spill-hue:2deg;--spill-sat:1.08;--spill-bright:.86">
+          <div class="shake-top"><span class="shake-no">5</span><h3>Kashmir Royal Protein</h3></div>
+          <p class="shake-desc">Dates, saffron, cardamom, and premium nuts in a rich Kashmiri-style shake.</p>
+          <div class="shake-art"><img class="shake-photo" src="assets/shakes/kashmir-royal-protein.png" alt="Kashmir Royal Protein shake with dates, saffron, cardamom, and nuts" loading="lazy" decoding="async" width="760" height="760" /></div>
+          <div class="macros"><div class="macro"><b>606</b><span>kcal</span></div><div class="macro"><b>39g</b><span>protein</span></div><div class="macro"><b>49g</b><span>carbs</span></div><div class="macro"><b>29g</b><span>fat</span></div></div>
+          <div class="prices"><div class="price"><span>350 ml</span><b>Rs 199</b></div><div class="price"><span>500 ml</span><b>Rs 249</b></div></div>
+        </article>
+        <article class="shake-card rise" style="--top-a:#5a2a18;--top-b:#d4a05b;--spill-hue:-10deg;--spill-sat:1.06;--spill-bright:.72">
+          <div class="shake-top"><span class="shake-no">6</span><h3>Dates Explosion</h3></div>
+          <p class="shake-desc">50 g dates with oats, nuts, and flax for natural energy that lasts.</p>
+          <div class="shake-art"><img class="shake-photo" src="assets/shakes/dates-explosion.png" alt="Dates Explosion protein shake with dates, oats, nuts, and flax" loading="lazy" decoding="async" width="760" height="760" /></div>
+          <div class="macros"><div class="macro"><b>654</b><span>kcal</span></div><div class="macro"><b>38g</b><span>protein</span></div><div class="macro"><b>76g</b><span>carbs</span></div><div class="macro"><b>24g</b><span>fat</span></div></div>
+          <div class="prices"><div class="price"><span>350 ml</span><b>Rs 239</b></div><div class="price"><span>500 ml</span><b>Rs 299</b></div></div>
+        </article>
+        <article class="shake-card rise" style="--top-a:#476c22;--top-b:#d8b349;--spill-hue:52deg;--spill-sat:.78;--spill-bright:.92">
+          <div class="shake-top"><span class="shake-no">7</span><h3>Pistachio Delight</h3></div>
+          <p class="shake-desc">Kesar pista whey, real pistachios, saffron, and cardamom for a pure delight.</p>
+          <div class="shake-art"><img class="shake-photo" src="assets/shakes/pistachio-delight.png" alt="Pistachio Delight shake with pistachios, saffron, and cardamom" loading="lazy" decoding="async" width="760" height="760" /></div>
+          <div class="macros"><div class="macro"><b>631</b><span>kcal</span></div><div class="macro"><b>42g</b><span>protein</span></div><div class="macro"><b>44g</b><span>carbs</span></div><div class="macro"><b>33g</b><span>fat</span></div></div>
+          <div class="prices"><div class="price"><span>350 ml</span><b>Rs 239</b></div><div class="price"><span>500 ml</span><b>Rs 299</b></div></div>
+        </article>
+        <article class="shake-card rise" style="--top-a:#5e3319;--top-b:#d29a48;--spill-hue:-8deg;--spill-sat:1;--spill-bright:.8">
+          <div class="shake-top"><span class="shake-no">8</span><h3>Nutty Muscle Builder</h3></div>
+          <p class="shake-desc">Peanut butter, mixed nuts, oats, and flax built for muscle and calorie needs.</p>
+          <div class="shake-art"><img class="shake-photo" src="assets/shakes/nutty-muscle-builder.png" alt="Nutty Muscle Builder shake with peanut butter, mixed nuts, oats, and flax" loading="lazy" decoding="async" width="760" height="760" /></div>
+          <div class="macros"><div class="macro"><b>713</b><span>kcal</span></div><div class="macro"><b>45g</b><span>protein</span></div><div class="macro"><b>47g</b><span>carbs</span></div><div class="macro"><b>40g</b><span>fat</span></div></div>
+          <div class="prices"><div class="price"><span>350 ml</span><b>Rs 199</b></div><div class="price"><span>500 ml</span><b>Rs 249</b></div></div>
+        </article>
+        <article class="shake-card rise" style="--top-a:#5f7530;--top-b:#9b8153;--spill-hue:58deg;--spill-sat:.52;--spill-bright:.78">
+          <div class="shake-top"><span class="shake-no">9</span><h3>Seed Power Shake</h3></div>
+          <p class="shake-desc">Pumpkin, sunflower, flax, and chia seeds with almonds in a small-seeds, big-power blend.</p>
+          <div class="shake-art"><img class="shake-photo" src="assets/shakes/seed-power-shake.png" alt="Seed Power Shake with pumpkin, sunflower, flax, chia, and almonds" loading="lazy" decoding="async" width="760" height="760" /></div>
+          <div class="macros"><div class="macro"><b>680</b><span>kcal</span></div><div class="macro"><b>44g</b><span>protein</span></div><div class="macro"><b>47g</b><span>carbs</span></div><div class="macro"><b>37g</b><span>fat</span></div></div>
+          <div class="prices"><div class="price"><span>350 ml</span><b>Rs 199</b></div><div class="price"><span>500 ml</span><b>Rs 249</b></div></div>
+        </article>
+        <article class="shake-card rise" style="--top-a:#2b3553;--top-b:#f0d381;--spill-hue:255deg;--spill-sat:1.15;--spill-bright:.88">
+          <div class="shake-top"><span class="shake-no">10</span><h3>Snow Leopard Lean</h3></div>
+          <p class="shake-desc">High-protein, water-based berry shake for people watching calories.</p>
+          <div class="shake-art"><img class="shake-photo" src="assets/shakes/snow-leopard-lean.png" alt="Snow Leopard Lean water-based berry protein shake" loading="lazy" decoding="async" width="760" height="760" /></div>
+          <div class="macros"><div class="macro"><b>205</b><span>kcal</span></div><div class="macro"><b>28g</b><span>protein</span></div><div class="macro"><b>18g</b><span>carbs</span></div><div class="macro"><b>2g</b><span>fat</span></div></div>
+          <div class="prices"><div class="price"><span>350 ml</span><b>Rs 199</b></div><div class="price unavailable"><span>500 ml</span><b>Not available</b></div></div>
+        </article>
+        <article class="shake-card rise" style="--top-a:#2e274e;--top-b:#b06438;--spill-hue:285deg;--spill-sat:1.25;--spill-bright:.84">
+          <div class="shake-top"><span class="shake-no">11</span><h3>Berry &amp; Fig Pro</h3></div>
+          <p class="shake-desc">Mixed berries, anjeer, oats, chia, and almonds: fruity, filling, and protein-rich.</p>
+          <div class="shake-art"><img class="shake-photo" src="assets/shakes/berry-fig-pro.png" alt="Berry and Fig Pro shake with berries, fig, oats, chia, and almonds" loading="lazy" decoding="async" width="760" height="760" /></div>
+          <div class="macros"><div class="macro"><b>541</b><span>kcal</span></div><div class="macro"><b>36g</b><span>protein</span></div><div class="macro"><b>63g</b><span>carbs</span></div><div class="macro"><b>17g</b><span>fat</span></div></div>
+          <div class="prices"><div class="price"><span>350 ml</span><b>Rs 199</b></div><div class="price"><span>500 ml</span><b>Rs 249</b></div></div>
+        </article>
+        <article class="shake-card rise" style="--top-a:#2c1b13;--top-b:#a7794e;--spill-hue:-12deg;--spill-sat:1.05;--spill-bright:.65">
+          <div class="shake-top"><span class="shake-no">12</span><h3>Cold Coffee Pro</h3></div>
+          <p class="shake-desc">Real coffee, cocoa, oats, and dates for a protein coffee with fuel.</p>
+          <div class="shake-art"><img class="shake-photo" src="assets/shakes/cold-coffee-pro.png" alt="Cold Coffee Pro shake with coffee, cocoa, oats, and dates" loading="lazy" decoding="async" width="760" height="760" /></div>
+          <div class="macros"><div class="macro"><b>449</b><span>kcal</span></div><div class="macro"><b>35g</b><span>protein</span></div><div class="macro"><b>54g</b><span>carbs</span></div><div class="macro"><b>11g</b><span>fat</span></div></div>
+          <div class="prices"><div class="price"><span>350 ml</span><b>Rs 183</b></div><div class="price"><span>500 ml</span><b>Rs 229</b></div></div>
+        </article>
       </div>
-      <div class="feat">
-        <span class="k">02</span>
-        <div><h3>Guided by people who train</h3><p>Tell us your goal and we'll build the stack. Free, honest advice — never an upsell.</p></div>
+      <div class="note-band rise"><strong>No whey?</strong><p>Enjoy any shake without whey and save Rs 70 on both sizes. Choose your shake, size, and whey preference while ordering.</p><div class="save">Save Rs 70</div></div>
+    </div>
+  </section>
+  <section class="food-section" id="food-menu">
+    <div class="wrap">
+      <div class="food-head rise">
+        <div><span class="eyebrow">Beyond the blender</span><h2 style="margin-top:16px">Clean food. Serious fuel.</h2></div>
+        <p>Explore the bowls, wraps, breakfast options, yoghurt, parfaits, and protein coffee shared by 5G Nutrition. Macros are approximate as shown on the original menu posters.</p>
       </div>
-      <div class="feat">
-        <span class="k">03</span>
-        <div><h3>The whole valley, covered</h3><p>Same-day in Srinagar and fast delivery across Kashmir, with cash on delivery.</p></div>
+      <div class="food-filters rise" aria-label="Filter food menu">
+        <button class="food-filter is-active" type="button" data-filter="all" aria-pressed="true">All</button>
+        <button class="food-filter" type="button" data-filter="breakfast" aria-pressed="false">Breakfast &amp; cups</button>
+        <button class="food-filter" type="button" data-filter="bowls" aria-pressed="false">Power bowls</button>
+        <button class="food-filter" type="button" data-filter="handheld" aria-pressed="false">Wraps &amp; toast</button>
+        <button class="food-filter" type="button" data-filter="coffee" aria-pressed="false">Coffee</button>
+      </div>
+      <div class="food-grid">
+        <article class="food-card rise" data-category="breakfast" style="--focus:50% 62%">
+          <a class="food-media" href="assets/offers/greek-yoghurt.jpeg" target="_blank" rel="noopener" aria-label="View full Greek yoghurt poster"><span class="food-chip">Breakfast</span><img src="assets/offers/greek-yoghurt.jpeg" alt="Greek yoghurt bowl with berries, fruit, nuts, and seeds" loading="lazy" decoding="async" /></a>
+          <div class="food-body"><h3>Loaded Greek Yoghurt</h3><p>Greek yoghurt with blueberries, strawberries, pineapple, mixed seeds, dry fruits, and strawberry syrup.</p><div class="food-macros"><div class="food-macro"><b>High</b><span>protein</span></div><div class="food-macro"><b>Rich</b><span>calcium</span></div><div class="food-macro"><b>Clean</b><span>natural</span></div><div class="food-macro"><b>Easy</b><span>to digest</span></div></div></div>
+          <div class="food-foot"><div class="food-price is-ask"><small>Price</small>Ask on Instagram</div><a class="poster-link" href="assets/offers/greek-yoghurt.jpeg" target="_blank" rel="noopener">View poster</a></div>
+        </article>
+        <article class="food-card rise" data-category="breakfast" style="--focus:63% 61%">
+          <a class="food-media" href="assets/offers/power-oats.jpeg" target="_blank" rel="noopener" aria-label="View full Power Oats poster"><span class="food-chip">Breakfast</span><img src="assets/offers/power-oats.jpeg" alt="5G Power Oats topped with berries, nuts, and dried fruit" loading="lazy" decoding="async" /></a>
+          <div class="food-body"><h3>5G Power Oats</h3><p>Overnight oats with fruit, nuts, and seeds for slow-release energy and a strong start.</p><div class="food-macros"><div class="food-macro"><b>590</b><span>kcal</span></div><div class="food-macro"><b>20g</b><span>protein</span></div><div class="food-macro"><b>72g</b><span>carbs</span></div><div class="food-macro"><b>22g</b><span>fat</span></div></div></div>
+          <div class="food-foot"><div class="food-price"><small>Price</small>Rs 179</div><a class="poster-link" href="assets/offers/power-oats.jpeg" target="_blank" rel="noopener">View poster</a></div>
+        </article>
+        <article class="food-card rise" data-category="handheld" style="--focus:63% 62%">
+          <a class="food-media" href="assets/offers/power-toast.jpeg" target="_blank" rel="noopener" aria-label="View full Power Toast poster"><span class="food-chip">Toast</span><img src="assets/offers/power-toast.jpeg" alt="Whole-wheat Power Toast with peanut butter, banana, seeds, and honey" loading="lazy" decoding="async" /></a>
+          <div class="food-body"><h3>5G Power Toast</h3><p>Whole-wheat toast with natural peanut butter, banana, seeds, honey, and cinnamon.</p><div class="food-macros"><div class="food-macro"><b>450</b><span>kcal</span></div><div class="food-macro"><b>18g</b><span>protein</span></div><div class="food-macro"><b>45g</b><span>carbs</span></div><div class="food-macro"><b>22g</b><span>fat</span></div></div></div>
+          <div class="food-foot"><div class="food-price"><small>Price</small>Rs 99</div><a class="poster-link" href="assets/offers/power-toast.jpeg" target="_blank" rel="noopener">View poster</a></div>
+        </article>
+        <article class="food-card rise" data-category="coffee" style="--focus:50% 51%">
+          <a class="food-media" href="assets/offers/power-brew.jpeg" target="_blank" rel="noopener" aria-label="View full Power Brew poster"><span class="food-chip">Hot or iced</span><img src="assets/offers/power-brew.jpeg" alt="5G Power Brew protein coffee served hot and iced" loading="lazy" decoding="async" /></a>
+          <div class="food-body"><h3>5G Power Brew</h3><p>Double espresso, whey isolate, and low-fat milk. Hot: 175 kcal and 9g carbs. Iced: 165 kcal and 8g carbs.</p><div class="food-macros"><div class="food-macro"><b>175/165</b><span>kcal</span></div><div class="food-macro"><b>22g</b><span>protein</span></div><div class="food-macro"><b>9/8g</b><span>carbs</span></div><div class="food-macro"><b>2g</b><span>fat</span></div></div></div>
+          <div class="food-foot"><div class="food-price"><small>Each</small>Rs 149</div><a class="poster-link" href="assets/offers/power-brew.jpeg" target="_blank" rel="noopener">View poster</a></div>
+        </article>
+        <article class="food-card rise" data-category="breakfast" style="--focus:65% 58%">
+          <a class="food-media" href="assets/offers/greek-yoghurt-cup.jpeg" target="_blank" rel="noopener" aria-label="View full Greek Yoghurt Cup poster"><span class="food-chip">Chilled cup</span><img src="assets/offers/greek-yoghurt-cup.jpeg" alt="Greek yoghurt cup with blueberries, seeds, honey, and dried fruit" loading="lazy" decoding="async" /></a>
+          <div class="food-body"><h3>Greek Yoghurt Cup</h3><p>Greek yoghurt with honey, pumpkin and sunflower seeds, blueberries, dried fruit, and cinnamon.</p><div class="food-macros"><div class="food-macro"><b>190</b><span>kcal</span></div><div class="food-macro"><b>14g</b><span>protein</span></div><div class="food-macro"><b>17g</b><span>carbs</span></div><div class="food-macro"><b>7g</b><span>fat</span></div></div></div>
+          <div class="food-foot"><div class="food-price"><small>Price</small>Rs 99</div><a class="poster-link" href="assets/offers/greek-yoghurt-cup.jpeg" target="_blank" rel="noopener">View poster</a></div>
+        </article>
+        <article class="food-card rise" data-category="breakfast" style="--focus:50% 61%">
+          <a class="food-media" href="assets/offers/power-parfait.jpeg" target="_blank" rel="noopener" aria-label="View full Power Parfait poster"><span class="food-chip">Two sizes</span><img src="assets/offers/power-parfait.jpeg" alt="Regular and lite 5G Power Parfait with Greek yoghurt, berries, nuts, seeds, and dried fruit" loading="lazy" decoding="async" /></a>
+          <div class="food-body"><h3>5G Power Parfait</h3><p>Regular: 770 kcal and 49g protein. Lite: 355 kcal and 14g protein. Both use thick Greek yoghurt and real fruit.</p><div class="food-macros"><div class="food-macro"><b>770/355</b><span>kcal</span></div><div class="food-macro"><b>49/14g</b><span>protein</span></div><div class="food-macro"><b>74/39g</b><span>carbs</span></div><div class="food-macro"><b>30/16g</b><span>fat</span></div></div></div>
+          <div class="food-foot"><div class="food-price"><small>Regular / lite</small>Rs 299 / 149</div><a class="poster-link" href="assets/offers/power-parfait.jpeg" target="_blank" rel="noopener">View poster</a></div>
+        </article>
+        <article class="food-card rise" data-category="bowls" style="--focus:58% 66%">
+          <a class="food-media" href="assets/offers/beef-beast-bowl.jpeg" target="_blank" rel="noopener" aria-label="View full Beef Beast Bowl poster"><span class="food-chip">Power bowl</span><img src="assets/offers/beef-beast-bowl.jpeg" alt="Beef Beast Bowl with beef, mushrooms, grains, broccoli, and carrots" loading="lazy" decoding="async" /></a>
+          <div class="food-body"><h3>Beef Beast Bowl</h3><p>Beef and mushrooms with grains, broccoli, and carrots for a high-protein, balanced meal.</p><div class="food-macros"><div class="food-macro"><b>490</b><span>kcal</span></div><div class="food-macro"><b>43g</b><span>protein</span></div><div class="food-macro"><b>42g</b><span>carbs</span></div><div class="food-macro"><b>15g</b><span>fat</span></div></div></div>
+          <div class="food-foot"><div class="food-price is-ask"><small>Price</small>Ask on Instagram</div><a class="poster-link" href="assets/offers/beef-beast-bowl.jpeg" target="_blank" rel="noopener">View poster</a></div>
+        </article>
+        <article class="food-card rise" data-category="bowls" style="--focus:50% 57%">
+          <a class="food-media" href="assets/offers/beast-bowl-sizes.jpeg" target="_blank" rel="noopener" aria-label="View full Beast Bowl sizes poster"><span class="food-chip">Lite or regular</span><img class="food-swap-base" src="assets/offers/beast-bowl.jpeg" alt="5G Beast Bowl with egg whites, cheese, and vegetables" loading="lazy" decoding="async" /><img class="food-swap" src="assets/offers/beast-bowl-sizes.jpeg" alt="Lite and regular 5G Beast Bowl size comparison" loading="lazy" decoding="async" /></a>
+          <div class="food-body"><h3>5G Beast Bowl</h3><p>Lite: 35g protein and 400 kcal. Regular: 60g+ protein and 700 kcal, with egg whites, cheese, and vegetables.</p><div class="food-macros"><div class="food-macro"><b>400/700</b><span>kcal</span></div><div class="food-macro"><b>35/60g+</b><span>protein</span></div><div class="food-macro"><b>7/10g</b><span>carbs</span></div><div class="food-macro"><b>22/45g</b><span>fat</span></div></div></div>
+          <div class="food-foot"><div class="food-price"><small>Lite / regular</small>Rs 179 / 249</div><a class="poster-link" href="assets/offers/beast-bowl-sizes.jpeg" target="_blank" rel="noopener">View sizes</a></div>
+        </article>
+        <article class="food-card rise" data-category="bowls" style="--focus:52% 65%">
+          <a class="food-media" href="assets/offers/grilled-chicken-power-bowl.jpeg" target="_blank" rel="noopener" aria-label="View full Grilled Chicken Power Bowl poster"><span class="food-chip">Power bowl</span><img src="assets/offers/grilled-chicken-power-bowl.jpeg" alt="Grilled chicken power bowl with grains, broccoli, and carrots" loading="lazy" decoding="async" /></a>
+          <div class="food-body"><h3>Grilled Chicken Power Bowl</h3><p>Grilled chicken with grains, broccoli, and carrots, built for clean fuel and sustained energy.</p><div class="food-macros"><div class="food-macro"><b>510</b><span>kcal</span></div><div class="food-macro"><b>65g</b><span>protein</span></div><div class="food-macro"><b>27.6g</b><span>carbs</span></div><div class="food-macro"><b>12.4g</b><span>fat</span></div></div></div>
+          <div class="food-foot"><div class="food-price is-ask"><small>Price</small>Ask on Instagram</div><a class="poster-link" href="assets/offers/grilled-chicken-power-bowl.jpeg" target="_blank" rel="noopener">View poster</a></div>
+        </article>
+        <article class="food-card rise" data-category="bowls" style="--focus:72% 56%">
+          <a class="food-media" href="assets/offers/power-chicken-salad.jpeg" target="_blank" rel="noopener" aria-label="View full Power Chicken Salad poster"><span class="food-chip">Salad</span><img src="assets/offers/power-chicken-salad.jpeg" alt="Power Chicken Salad with grilled chicken and fresh vegetables" loading="lazy" decoding="async" /></a>
+          <div class="food-body"><h3>Power Chicken Salad</h3><p>Grilled chicken with fresh vegetables, extra virgin olive oil, lemon dressing, herbs, and spices.</p><div class="food-macros"><div class="food-macro"><b>470</b><span>kcal</span></div><div class="food-macro"><b>60g</b><span>protein</span></div><div class="food-macro"><b>18g</b><span>carbs</span></div><div class="food-macro"><b>16g</b><span>fat</span></div></div></div>
+          <div class="food-foot"><div class="food-price"><small>Price</small>Rs 329</div><a class="poster-link" href="assets/offers/power-chicken-salad.jpeg" target="_blank" rel="noopener">View poster</a></div>
+        </article>
+        <article class="food-card rise" data-category="handheld" style="--focus:24% 58%">
+          <a class="food-media" href="assets/offers/power-wraps.jpeg" target="_blank" rel="noopener" aria-label="View full Chicken Power Wrap poster"><span class="food-chip">Chicken wrap</span><img src="assets/offers/power-wraps.jpeg" alt="Chicken Power Wrap with grilled chicken and fresh vegetables" loading="lazy" decoding="async" /></a>
+          <div class="food-body"><h3>Chicken Power Wrap</h3><p>Grilled chicken, fresh vegetables, signature mayo-mustard sauce, and a whole-wheat tortilla.</p><div class="food-macros"><div class="food-macro"><b>495</b><span>kcal</span></div><div class="food-macro"><b>50g</b><span>protein</span></div><div class="food-macro"><b>35g</b><span>carbs</span></div><div class="food-macro"><b>14g</b><span>fat</span></div></div></div>
+          <div class="food-foot"><div class="food-price"><small>Price</small>Rs 199</div><a class="poster-link" href="assets/offers/power-wraps.jpeg" target="_blank" rel="noopener">View poster</a></div>
+        </article>
+        <article class="food-card rise" data-category="handheld" style="--focus:76% 58%">
+          <a class="food-media" href="assets/offers/power-wraps.jpeg" target="_blank" rel="noopener" aria-label="View full Paneer Power Wrap poster"><span class="food-chip">Paneer wrap</span><img src="assets/offers/power-wraps.jpeg" alt="Paneer Power Wrap with grilled paneer and fresh vegetables" loading="lazy" decoding="async" /></a>
+          <div class="food-body"><h3>Paneer Power Wrap</h3><p>Grilled paneer, fresh vegetables, signature mayo-mustard sauce, and a whole-wheat tortilla.</p><div class="food-macros"><div class="food-macro"><b>520</b><span>kcal</span></div><div class="food-macro"><b>31g</b><span>protein</span></div><div class="food-macro"><b>38g</b><span>carbs</span></div><div class="food-macro"><b>22g</b><span>fat</span></div></div></div>
+          <div class="food-foot"><div class="food-price"><small>Price</small>Rs 179</div><a class="poster-link" href="assets/offers/power-wraps.jpeg" target="_blank" rel="noopener">View poster</a></div>
+        </article>
+        <article class="food-card rise" data-category="bowls" style="--focus:62% 62%">
+          <a class="food-media" href="assets/offers/omega-beast-bowl.jpeg" target="_blank" rel="noopener" aria-label="View full Omega Beast Bowl poster"><span class="food-chip">Trout bowl</span><img src="assets/offers/omega-beast-bowl.jpeg" alt="Omega Beast Bowl with grilled trout, grains, broccoli, and vegetables" loading="lazy" decoding="async" /></a>
+          <div class="food-body"><h3>Omega Beast Bowl</h3><p>Premium grilled trout with grains and vegetables, offering approximately 2.2g omega-3 per serving.</p><div class="food-macros"><div class="food-macro"><b>495</b><span>kcal</span></div><div class="food-macro"><b>47g</b><span>protein</span></div><div class="food-macro"><b>34g</b><span>carbs</span></div><div class="food-macro"><b>18g</b><span>fat</span></div></div></div>
+          <div class="food-foot"><div class="food-price is-ask"><small>Price</small>Ask on Instagram</div><a class="poster-link" href="assets/offers/omega-beast-bowl.jpeg" target="_blank" rel="noopener">View poster</a></div>
+        </article>
       </div>
     </div>
-    <div class="rise">
-      <div class="meter">
-        <div class="top">
-          <span class="bars" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i></span>
-          <span class="badge">Verified</span>
-        </div>
-        <div class="row"><span class="lab"><svg class="tick" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M20 6 9 17l-5-5"/></svg>Sealed & tamper-proof</span><span class="val">PASS</span></div>
-        <div class="row"><span class="lab"><svg class="tick" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M20 6 9 17l-5-5"/></svg>QR scan → official site</span><span class="val">PASS</span></div>
-        <div class="row"><span class="lab"><svg class="tick" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M20 6 9 17l-5-5"/></svg>Batch COA available</span><span class="val">PASS</span></div>
-        <div class="row"><span class="lab"><svg class="tick" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M20 6 9 17l-5-5"/></svg>Long expiry, fresh stock</span><span class="val">PASS</span></div>
-        <p class="note">Every product that leaves 5G Nutrition passes this check. Not sure about something you bought elsewhere? Bring it in — we'll verify it with you, free.</p>
+  </section>
+  <section class="reels-section" id="learn">
+    <div class="wrap">
+      <div class="section-head rise">
+        <div><span class="eyebrow">Watch and learn</span><h2 style="margin-top:16px">Nutrition in motion</h2></div>
+        <p>Three short stories from 5G Nutrition about eating better, learning through experience, and developing every recipe with care.</p>
+      </div>
+      <div class="reel-grid">
+        <article class="reel-card rise">
+          <div class="reel-frame"><iframe src="https://www.instagram.com/reel/DaSV8XayUrC/embed/" data-autoplay-src="https://www.instagram.com/reel/DaSV8XayUrC/embed/?autoplay=1" title="5G Nutrition reel about real food, shakes, supplements, and healthy meals" loading="lazy" scrolling="no" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share" allowfullscreen></iframe></div>
+          <div class="reel-copy"><span class="reel-index">Reel 01</span><h3>Nutrition, not just supplements</h3><p>A quick introduction to the 5G approach: real food, powerful shakes, healthy meals, and thoughtful supplementation.</p><a class="reel-link" href="https://www.instagram.com/reel/DaSV8XayUrC/" target="_blank" rel="noopener">Watch on Instagram</a></div>
+        </article>
+        <article class="reel-card rise">
+          <div class="reel-frame"><iframe src="https://www.instagram.com/reel/DaVtTUtSx-x/embed/" data-autoplay-src="https://www.instagram.com/reel/DaVtTUtSx-x/embed/?autoplay=1" title="5G Nutrition founder story about training and learning the importance of nutrition" loading="lazy" scrolling="no" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share" allowfullscreen></iframe></div>
+          <div class="reel-copy"><span class="reel-index">Reel 02</span><h3>You cannot out-train poor nutrition</h3><p>The founder's fitness journey and the lesson that years of hard training still need the right nutrition behind them.</p><a class="reel-link" href="https://www.instagram.com/reel/DaVtTUtSx-x/" target="_blank" rel="noopener">Watch on Instagram</a></div>
+        </article>
+        <article class="reel-card rise">
+          <div class="reel-frame"><iframe src="https://www.instagram.com/reel/Db5pMWKya-I/embed/" data-autoplay-src="https://www.instagram.com/reel/Db5pMWKya-I/embed/?autoplay=1" title="5G Nutrition Berries and Fig Protein shake trial run" loading="lazy" scrolling="no" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share" allowfullscreen></iframe></div>
+          <div class="reel-copy"><span class="reel-index">Reel 03</span><h3>Berries &amp; Fig, tested and refined</h3><p>Behind the signature shake: berries, figs, nuts, seeds, and protein tested and adjusted before reaching the menu.</p><a class="reel-link" href="https://www.instagram.com/reel/Db5pMWKya-I/" target="_blank" rel="noopener">Watch on Instagram</a></div>
+        </article>
       </div>
     </div>
-  </div>
-</section>
-
-<!-- ===== HOW TO ORDER ===== -->
-<section class="blk" id="order">
-  <div class="wrap">
-    <div class="head rise">
-      <div>
-        <span class="eyebrow fog">How to order</span>
-        <h2 style="margin-top:16px">Fuelled up in three</h2>
-      </div>
-      <p>No app, no account, no wait. Message us and we'll take it from there.</p>
+  </section>
+  <section id="order">
+    <div class="wrap">
+      <div class="section-head rise"><div><span class="eyebrow">How to order</span><h2 style="margin-top:16px">DM your pick</h2></div><p>Choose a shake, bowl, wrap, breakfast option, or coffee and confirm the latest availability directly with 5G Nutrition.</p></div>
+      <div class="process"><article class="step rise"><div class="num">01</div><h3>Send a DM</h3><p>Message 5G Nutrition on Instagram to begin your order.</p></article><article class="step rise"><div class="num">02</div><h3>Choose</h3><p>Share your item, portion or shake size, and any available options.</p></article><article class="step rise"><div class="num">03</div><h3>Confirm</h3><p>Check current availability, delivery, total price, and payment details.</p></article><article class="step rise"><div class="num">04</div><h3>Prepared</h3><p>Your order is freshly prepared with care.</p></article><article class="step rise"><div class="num">05</div><h3>Delivered</h3><p>Delivery is available around Srinagar within a limited radius.</p></article></div>
+      <div class="hero-actions" style="margin-top:30px"><a class="btn btn-primary" href="https://www.instagram.com/5g.nutrition/" target="_blank" rel="noopener">DM @5g.nutrition</a><a class="btn btn-ghost" href="#food-menu">Back to food menu</a></div>
     </div>
-    <div class="steps">
-      <div class="step rise"><div class="num">01</div><h3>Message us</h3><p>Ping us on WhatsApp or Instagram with what you're after — or just your goal.</p></div>
-      <div class="step rise"><div class="num">02</div><h3>We confirm</h3><p>We check live stock, quote the best price and confirm authenticity on the spot.</p></div>
-      <div class="step rise"><div class="num">03</div><h3>Pay on delivery</h3><p>It reaches your door across Kashmir. Pay cash when it lands. Done.</p></div>
-    </div>
-    <div class="hero-cta" style="margin-top:38px">
-      <a class="btn btn-primary" href="https://wa.me/919XXXXXXXXX" target="_blank" rel="noopener">
-        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2a10 10 0 0 0-8.7 15l-1.3 4.7 4.8-1.3A10 10 0 1 0 12 2Zm5.5 14.2c-.2.6-1.2 1.2-1.7 1.2-.4 0-.9.2-3-1-2.5-1.4-4-4-4.2-4.2-.1-.2-1-1.3-1-2.5s.6-1.7.8-2c.2-.2.4-.3.6-.3h.5c.2 0 .4 0 .6.5l.8 2c.1.2.1.4 0 .5l-.4.5c-.2.2-.3.3-.1.6.2.3.8 1.3 1.7 2 .9.7 1.4.9 1.7 1 .2.1.4.1.5-.1l.7-.8c.2-.2.3-.2.6-.1l1.9.9c.3.1.5.2.5.4v1.2Z"/></svg>
-        Chat on WhatsApp
-      </a>
-      <a class="btn btn-ghost" href="https://www.instagram.com/5gnutrition" target="_blank" rel="noopener">DM on Instagram</a>
-    </div>
-  </div>
-</section>
-
-<!-- ===== TESTIMONIALS ===== -->
-<section class="blk" style="padding-top:0">
-  <div class="wrap">
-    <div class="head rise">
-      <div>
-        <span class="eyebrow fog">From the valley</span>
-        <h2 style="margin-top:16px">Trusted by lifters</h2>
+  </section>
+  <section id="proof">
+    <div class="wrap proof-grid">
+      <div class="poster rise"><img src="assets/signature-menu-cropped.jpeg" alt="5G Nutrition final signature shake menu poster with macros and prices" /></div>
+      <div class="proof-copy">
+        <div class="section-head rise" style="display:block;margin-bottom:6px"><span class="eyebrow">Original menu artwork</span><h2 style="margin-top:16px">The details, made easier</h2></div>
+        <article class="proof-card rise"><h3>Full range, one page</h3><p>The website now brings the shared shakes, bowls, wraps, yoghurt, oats, parfaits, toast, salad, and protein coffee into one filterable menu.</p></article>
+        <article class="proof-card rise"><h3>Real ingredients, real results</h3><p>5G Nutrition focuses on high-protein choices, whole-food ingredients, clear approximate macros, and fresh preparation for different goals.</p></article>
+        <article class="poster rise"><img src="assets/offers/greek-yoghurt.jpeg" alt="5G Nutrition Greek yoghurt poster with ingredients and nutrition benefits" loading="lazy" decoding="async" /></article>
       </div>
     </div>
-    <div class="quotes">
-      <div class="quote rise">
-        <div class="stars">★★★★★</div>
-        <p>Finally a place in Srinagar I can trust for real whey. QR checked out, delivered next day. This is my shop now.</p>
-        <div class="who"><span class="av">A</span><div><b>Aamir R.</b><small>Rajbagh, Srinagar</small></div></div>
+  </section>
+  <section class="faq-section" id="faq">
+    <div class="wrap faq-layout">
+      <div class="faq-intro rise">
+        <span class="eyebrow">Good to know</span>
+        <h2 style="margin-top:16px">Frequently asked</h2>
+        <p>Clear answers about whey, ingredients, preparation, nutrition values, customization, and ordering. For personal medical or dietary advice, speak with a qualified healthcare professional.</p>
+        <a class="faq-source" href="https://www.fda.gov/consumers/consumer-updates/fda-101-dietary-supplements" target="_blank" rel="noopener">General supplement guidance</a>
       </div>
-      <div class="quote rise">
-        <div class="stars">★★★★★</div>
-        <p>Asked them to build a stack for lean bulking. Honest advice, no upselling, fair price. Gained clean.</p>
-        <div class="who"><span class="av">S</span><div><b>Suhail M.</b><small>Baramulla</small></div></div>
-      </div>
-      <div class="quote rise">
-        <div class="stars">★★★★★</div>
-        <p>Ordered creatine and a shaker over WhatsApp at night, had it by afternoon. Cash on delivery made it easy.</p>
-        <div class="who"><span class="av">I</span><div><b>Insha J.</b><small>Anantnag</small></div></div>
+      <div class="faq-list rise">
+        <details class="faq-item" open>
+          <summary>Is whey protein safe?</summary>
+          <div class="faq-answer">Whey is a milk-derived protein with a long history of use in foods and is generally suitable for most healthy adults when used as directed. It is not suitable for someone with a milk-protein allergy, and some lactose-intolerant people may experience symptoms. If you have a medical condition, take medication, are pregnant, or are unsure, check with your doctor or dietitian first.</div>
+        </details>
+        <details class="faq-item">
+          <summary>Do I need whey in my shake?</summary>
+          <div class="faq-answer">No. The shake menu offers a no-whey option and shows a saving of Rs 70 for both sizes. No-whey does not automatically mean dairy-free, so mention any allergy or intolerance while ordering.</div>
+        </details>
+        <details class="faq-item">
+          <summary>Is the food clean?</summary>
+          <div class="faq-answer">At 5G, “clean” means an ingredient-led approach built around foods such as fruit, oats, nuts, seeds, yoghurt, eggs, chicken, vegetables, grains, and trout. Individual posters also identify features such as no artificial colours or no preservatives where applicable. Ask for the exact ingredient list if you follow a specific diet.</div>
+        </details>
+        <details class="faq-item">
+          <summary>Is everything made fresh?</summary>
+          <div class="faq-answer">The shared menu states that shakes and meals are freshly prepared to order or prepared fresh daily. Availability and preparation times can vary, so confirm your item and preferred time when placing the order.</div>
+        </details>
+        <details class="faq-item">
+          <summary>Are the calories and macros exact?</summary>
+          <div class="faq-answer">They are approximate. Ingredient brands, portion sizes, substitutions, and optional additions can change calories, protein, carbohydrates, and fat. Use the displayed figures as a practical guide rather than a medical calculation.</div>
+        </details>
+        <details class="faq-item">
+          <summary>What if I have a food allergy?</summary>
+          <div class="faq-answer">Tell 5G Nutrition before ordering. Menu items may contain or come into contact with milk, whey, yoghurt, nuts, peanuts, seeds, eggs, wheat, mustard, fish, and other allergens. Do not rely on a “no-whey” label as confirmation that an item is dairy-free.</div>
+        </details>
+        <details class="faq-item">
+          <summary>Which option suits my goal?</summary>
+          <div class="faq-answer">The menu includes calorie-dense shakes and bowls for higher energy needs, leaner shakes and salads for lighter choices, and high-protein meals for recovery. Your overall diet matters most; for a personalized plan, consult a registered dietitian or qualified nutrition professional.</div>
+        </details>
+        <details class="faq-item">
+          <summary>How do I order and is delivery available?</summary>
+          <div class="faq-answer">Send your selection to <a href="https://www.instagram.com/5g.nutrition/" target="_blank" rel="noopener">@5g.nutrition</a> on Instagram. Confirm current availability, customization, total price, payment, and delivery. Delivery is offered around Srinagar within a limited radius.</div>
+        </details>
       </div>
     </div>
-  </div>
-</section>
-
-<!-- ===== CTA BAND ===== -->
-<section class="band" id="contact">
-  <div class="band-bars" aria-hidden="true">
-    <span style="animation-delay:0s"></span><span style="animation-delay:.3s"></span><span style="animation-delay:.6s"></span><span style="animation-delay:.9s"></span><span style="animation-delay:1.2s"></span><span style="animation-delay:1.5s"></span><span style="animation-delay:1.8s"></span><span style="animation-delay:2.1s"></span><span style="animation-delay:2.4s"></span><span style="animation-delay:2.7s"></span>
-  </div>
-  <div class="wrap">
-    <div>
-      <h2>Tell us your goal. We'll fuel it.</h2>
-      <p>Bulk · Cut · Strength · Recovery — real product, real advice.</p>
-    </div>
-    <a class="btn btn-dark" href="https://wa.me/919XXXXXXXXX" target="_blank" rel="noopener">
-      <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2a10 10 0 0 0-8.7 15l-1.3 4.7 4.8-1.3A10 10 0 1 0 12 2Zm5.5 14.2c-.2.6-1.2 1.2-1.7 1.2-.4 0-.9.2-3-1-2.5-1.4-4-4-4.2-4.2-.1-.2-1-1.3-1-2.5s.6-1.7.8-2c.2-.2.4-.3.6-.3h.5c.2 0 .4 0 .6.5l.8 2c.1.2.1.4 0 .5l-.4.5c-.2.2-.3.3-.1.6.2.3.8 1.3 1.7 2 .9.7 1.4.9 1.7 1 .2.1.4.1.5-.1l.7-.8c.2-.2.3-.2.6-.1l1.9.9c.3.1.5.2.5.4v1.2Z"/></svg>
-      Message 5G Nutrition
-    </a>
-  </div>
-</section>
-
-<!-- ===== FOOTER ===== -->
+  </section>
+  <section class="cta" id="contact"><div class="wrap cta-grid"><div><h2>Good nutrition. Better you.</h2><p>Explore fresh shakes and clean meals, then confirm the latest availability directly on Instagram.</p></div><a class="btn btn-dark" href="https://www.instagram.com/5g.nutrition/" target="_blank" rel="noopener">Follow @5g.nutrition</a></div></section>
+</main>
 <footer>
   <div class="wrap">
-    <div class="foot-grid">
-      <div class="foot-brand">
-        <a href="#top" class="brand"><span class="bars" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i></span><span><span class="g5">5G</span> Nutrition</span></a>
-        <p>100% genuine sports nutrition, delivered across Kashmir. Fuel the next rep.</p>
-      </div>
-      <div>
-        <h4>Shop</h4>
-        <a href="#range">Whey Protein</a>
-        <a href="#range">Mass Gainers</a>
-        <a href="#range">Creatine</a>
-        <a href="#range">Pre-Workout</a>
-        <a href="#range">All categories</a>
-      </div>
-      <div>
-        <h4>Company</h4>
-        <a href="#why">Why 5G</a>
-        <a href="#order">How to order</a>
-        <a href="#brands">Brands</a>
-        <a href="https://www.instagram.com/5gnutrition" target="_blank" rel="noopener">Instagram</a>
-      </div>
-      <div>
-        <h4>Reach us</h4>
-        <a href="https://wa.me/919XXXXXXXXX" target="_blank" rel="noopener">WhatsApp: <span class="placeholder">+91 9XXX XXX XXX</span></a>
-        <a href="https://www.instagram.com/5gnutrition" target="_blank" rel="noopener">@5gnutrition</a>
-        <p><span class="placeholder">[Shop address, Srinagar]</span></p>
-        <p>Open: <span class="placeholder">[Mon–Sun, 10am–9pm]</span></p>
-      </div>
+    <div class="foot">
+      <div><a class="brand" href="#top"><img class="brand-logo" src="assets/brand/5g-nutrition-logo-transparent.png" alt="5G Nutrition - Your Daily Protein Connection" width="1408" height="896" /></a><p style="margin-top:12px">Protein shakes and clean meals made fresh in Srinagar with real ingredients and clear macros.</p></div>
+      <div><h4>Menu</h4><a href="#menu-list">12 signature shakes</a><a href="#food-menu">Food and coffee</a><a href="#learn">Nutrition reels</a><a href="#faq">FAQs</a><a href="#order">How to order</a></div>
+      <div><h4>Highlights</h4><p>High protein</p><p>Real ingredients</p><p>Clear approximate macros</p><p>Freshly prepared</p></div>
+      <div><h4>Reach us</h4><a href="https://www.instagram.com/5g.nutrition/" target="_blank" rel="noopener">@5g.nutrition</a><a href="https://www.instagram.com/p/Db0Da15yx3H/" target="_blank" rel="noopener">Instagram launch post</a><p>Srinagar, Kashmir</p></div>
     </div>
-    <div class="foot-bottom">
-      <p>© <span id="yr"></span> 5G Nutrition · Srinagar, Kashmir</p>
-      <p>Genuine supplements · Delivered valley-wide</p>
-    </div>
+    <div class="bottom"><p>&copy; <span id="yr"></span> 5G Nutrition</p><p>Nutrition values are approximate and may vary by ingredient brand.</p></div>
   </div>
 </footer>
-</main>
-
-<!-- floating whatsapp -->
-<a class="fab" href="https://wa.me/919XXXXXXXXX" target="_blank" rel="noopener" aria-label="Chat on WhatsApp">
-  <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2a10 10 0 0 0-8.7 15l-1.3 4.7 4.8-1.3A10 10 0 1 0 12 2Zm5.5 14.2c-.2.6-1.2 1.2-1.7 1.2-.4 0-.9.2-3-1-2.5-1.4-4-4-4.2-4.2-.1-.2-1-1.3-1-2.5s.6-1.7.8-2c.2-.2.4-.3.6-.3h.5c.2 0 .4 0 .6.5l.8 2c.1.2.1.4 0 .5l-.4.5c-.2.2-.3.3-.1.6.2.3.8 1.3 1.7 2 .9.7 1.4.9 1.7 1 .2.1.4.1.5-.1l.7-.8c.2-.2.3-.2.6-.1l1.9.9c.3.1.5.2.5.4v1.2Z"/></svg>
-</a>
-
+<a class="fab" href="https://www.instagram.com/5g.nutrition/" target="_blank" rel="noopener" aria-label="Open 5G Nutrition on Instagram"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"></rect><circle cx="12" cy="12" r="4"></circle><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"></circle></svg></a>
 <script>
-  // year
-  document.getElementById('yr').textContent = new Date().getFullYear();
+  var loaderStartedAt = Date.now();
+  var loaderRevealScheduled = false;
+  function revealSite(){
+    if(loaderRevealScheduled || document.documentElement.classList.contains('site-ready')){return;}
+    loaderRevealScheduled = true;
+    var remaining = Math.max(0, 650 - (Date.now() - loaderStartedAt));
+    window.setTimeout(function(){
+      document.documentElement.classList.remove('site-loading');
+      document.documentElement.classList.add('site-ready');
+      var loader = document.getElementById('siteLoader');
+      if(loader){window.setTimeout(function(){loader.remove();}, 560);}
+    }, remaining);
+  }
+  if(document.readyState === 'complete'){revealSite();}
+  else{window.addEventListener('load', revealSite, {once:true});}
+  window.setTimeout(revealSite, 2400);
 
-  // mobile menu
+  function updateMediaShell(shell){
+    var items = shell.querySelectorAll('img:not(.site-loader-logo), iframe');
+    var ready = Array.prototype.every.call(items, function(item){
+      if(item.tagName === 'IFRAME'){return item.getAttribute('data-media-ready') === 'true';}
+      return item.complete && (item.naturalWidth > 0 || item.getAttribute('data-media-error') === 'true');
+    });
+    shell.classList.toggle('is-media-loading', !ready);
+    shell.classList.toggle('is-media-ready', ready);
+  }
+  function setMediaLoading(item){
+    var shell = item.closest('.media-shell');
+    if(!shell){return;}
+    if(item.tagName === 'IFRAME'){item.setAttribute('data-media-ready', 'false');}
+    shell.classList.add('is-media-loading');
+    shell.classList.remove('is-media-ready');
+  }
+  document.querySelectorAll('img:not(.site-loader-logo), .reel-frame iframe').forEach(function(item){
+    var shell = item.closest('.shake-art, .food-media, .poster, .brand, .reel-frame') || item.parentElement;
+    if(!shell){return;}
+    shell.classList.add('media-shell');
+    if(!Array.prototype.some.call(shell.children, function(child){return child.classList && child.classList.contains('media-shimmer');})){
+      var shimmer = document.createElement('span');
+      shimmer.className = 'media-shimmer';
+      shimmer.setAttribute('aria-hidden', 'true');
+      shell.appendChild(shimmer);
+    }
+    if(item.tagName === 'IFRAME'){
+      item.addEventListener('load', function(){item.setAttribute('data-media-ready', 'true');updateMediaShell(shell);});
+      item.addEventListener('error', function(){item.setAttribute('data-media-ready', 'true');updateMediaShell(shell);});
+    }else{
+      item.addEventListener('load', function(){updateMediaShell(shell);});
+      item.addEventListener('error', function(){item.setAttribute('data-media-error', 'true');updateMediaShell(shell);});
+    }
+    updateMediaShell(shell);
+  });
+
+  document.getElementById('yr').textContent = new Date().getFullYear();
   var menuBtn = document.getElementById('menuBtn');
   var menu = document.getElementById('menu');
-  menuBtn.addEventListener('click', function(){
-    var open = menu.classList.toggle('open');
-    menuBtn.setAttribute('aria-expanded', open);
+  menuBtn.addEventListener('click', function(){var open = menu.classList.toggle('open');menuBtn.setAttribute('aria-expanded', String(open));});
+  menu.querySelectorAll('a').forEach(function(link){link.addEventListener('click', function(){menu.classList.remove('open');menuBtn.setAttribute('aria-expanded','false');});});
+  document.querySelectorAll('.shake-card').forEach(function(card, index){
+    card.style.transitionDelay = ((index % 3) * 55) + 'ms';
+    card.addEventListener('pointermove', function(event){
+      var box = card.getBoundingClientRect();
+      card.style.setProperty('--mx', ((event.clientX - box.left) / box.width * 100) + '%');
+      card.style.setProperty('--my', ((event.clientY - box.top) / box.height * 100) + '%');
+    });
+    card.addEventListener('pointerleave', function(){
+      card.style.setProperty('--mx', '50%');
+      card.style.setProperty('--my', '35%');
+    });
   });
-  menu.querySelectorAll('a').forEach(function(a){
-    a.addEventListener('click', function(){ menu.classList.remove('open'); menuBtn.setAttribute('aria-expanded','false'); });
+  var foodFilters = document.querySelectorAll('.food-filter');
+  var foodCards = document.querySelectorAll('.food-card');
+  foodFilters.forEach(function(button){
+    button.addEventListener('click', function(){
+      var filter = button.getAttribute('data-filter');
+      foodFilters.forEach(function(item){
+        var active = item === button;
+        item.classList.toggle('is-active', active);
+        item.setAttribute('aria-pressed', String(active));
+      });
+      foodCards.forEach(function(card, index){
+        var visible = filter === 'all' || card.getAttribute('data-category') === filter;
+        card.classList.toggle('is-hidden', !visible);
+        if(visible && card.animate && !window.matchMedia('(prefers-reduced-motion: reduce)').matches){
+          card.animate([{opacity:0,transform:'translateY(16px)'},{opacity:1,transform:'translateY(0)'}],{duration:320,delay:(index % 4) * 35,easing:'cubic-bezier(.2,.8,.2,1)'});
+        }
+      });
+    });
   });
-
-  // scroll reveal
-  var io = new IntersectionObserver(function(entries){
-    entries.forEach(function(e){ if(e.isIntersecting){ e.target.classList.add('in'); io.unobserve(e.target); } });
-  }, {threshold:.12});
-  document.querySelectorAll('.rise').forEach(function(el){ io.observe(el); });
+  if(window.matchMedia('(hover: hover)').matches && !window.matchMedia('(prefers-reduced-motion: reduce)').matches){
+    foodCards.forEach(function(card){
+      card.addEventListener('pointermove', function(event){
+        var box = card.getBoundingClientRect();
+        var x = (event.clientX - box.left) / box.width;
+        var y = (event.clientY - box.top) / box.height;
+        card.style.setProperty('--mx', (x * 100) + '%');
+        card.style.setProperty('--my', (y * 100) + '%');
+        card.style.setProperty('--rx', ((.5 - y) * 5) + 'deg');
+        card.style.setProperty('--ry', ((x - .5) * 6) + 'deg');
+      });
+      card.addEventListener('pointerleave', function(){
+        card.style.setProperty('--mx', '50%');
+        card.style.setProperty('--my', '40%');
+        card.style.setProperty('--rx', '0deg');
+        card.style.setProperty('--ry', '0deg');
+      });
+    });
+  }
+  var reelCards = document.querySelectorAll('.reel-card');
+  function activateReel(card){
+    card.classList.add('is-active');
+    var frame = card.querySelector('iframe');
+    var autoplaySrc = frame && frame.getAttribute('data-autoplay-src');
+    if(frame && autoplaySrc && frame.getAttribute('data-activated') !== 'true'){
+      frame.setAttribute('data-activated', 'true');
+      setMediaLoading(frame);
+      frame.src = autoplaySrc;
+    }
+  }
+  function deactivateReel(card){
+    card.classList.remove('is-active');
+  }
+  reelCards.forEach(function(card){
+    card.addEventListener('mouseenter', function(){activateReel(card);});
+    card.addEventListener('mouseleave', function(){deactivateReel(card);});
+    card.addEventListener('focusin', function(){activateReel(card);});
+    card.addEventListener('focusout', function(){deactivateReel(card);});
+    card.addEventListener('pointerdown', function(){activateReel(card);}, {passive:true});
+  });
+  var rising = document.querySelectorAll('.rise');
+  if('IntersectionObserver' in window){
+    var observer = new IntersectionObserver(function(entries){entries.forEach(function(entry){if(entry.isIntersecting){entry.target.classList.add('in');observer.unobserve(entry.target);}});}, {threshold:.12});
+    rising.forEach(function(el){observer.observe(el);});
+  }else{
+    rising.forEach(function(el){el.classList.add('in');});
+  }
+  var hero = document.querySelector('.hero');
+  var progress = document.getElementById('pageProgress');
+  var reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  var scrollTicking = false;
+  function updateScrollEffects(){
+    var scrollMax = document.documentElement.scrollHeight - window.innerHeight;
+    if(progress){progress.style.transform = 'scaleX(' + (scrollMax > 0 ? window.scrollY / scrollMax : 0) + ')';}
+    if(hero && !reduceMotion && window.innerWidth > 680){hero.style.setProperty('--hero-shift', Math.min(20, window.scrollY * .04) + 'px');}
+    scrollTicking = false;
+  }
+  window.addEventListener('scroll', function(){
+    if(scrollTicking){return;}
+    scrollTicking = true;
+    window.requestAnimationFrame(updateScrollEffects);
+  }, {passive:true});
+  updateScrollEffects();
 </script>
 </body>
 </html>
